@@ -1,0 +1,194 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    background-color: v.$black;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    z-index: 3;
+
+    &-container {
+        width: 100%;
+        height: 100%;
+
+        @include m.tablet {
+            justify-content: space-between;
+        }
+    }
+
+    @include m.mobile {
+        #nav-small {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #nav-large {
+            display: none;
+        }
+    }
+
+    @include m.tablet {
+        #nav-large {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        #nav-small {
+            display: none;
+        }
+    }
+
+    &__contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-logo {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 2rem;
+
+            @include m.tablet {
+                flex-direction: row;
+                margin-bottom: 0;
+            }
+
+            &--toggle {
+                display: block;
+
+                @include m.tablet {
+                    display: none;
+                }
+            }
+        }
+
+        &-links {
+            width: 100%;
+            @extend .nav__contenedor;
+            @include m.tablet {
+                width: auto;
+            }
+        }
+    }
+
+    &__logo {
+        background-image: image-set(
+            url(../img/logo2.avif) 1x,
+            url(../img/logo2.webp) 1x,
+            url(../img/logo2.png) 1x);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 4.5rem;
+        height: 4.5rem;
+        margin: 1rem;
+        z-index: 3;
+        background-color: v.$gray-light;
+        border-radius: 50%;
+        transition-property: background-color;
+        transition-duration: .2s;
+
+        &:hover {
+            background-color: v.$white;
+        }
+    }
+
+    &__name {
+        padding: 1rem 2rem;
+        margin: 0;
+        font-size: 2rem;
+        text-decoration: none;
+        position: relative;
+        color: v.$white;
+        text-transform: uppercase;
+        line-height: 1.15;
+        transition-property: border-bottom, color;
+        transition-duration: .2s;
+
+        &:hover {
+            border-bottom: 1px solid v.$white;
+            color: v.$white;
+        }
+    }
+
+    &__toggle-image {
+        background-image: url('../img/barras.avif');
+        background-size: cover;
+        background-position: 0%;
+        display: block;
+        cursor: pointer;
+        width: 4rem;
+        height: 4rem;
+        margin: 1rem;
+        z-index: 3;
+
+        @include m.tablet {
+            margin: 2rem;
+        }
+
+        @include m.desktop {
+            display: none;
+        }
+    }
+
+    &__links {
+        display: none;
+
+        @include m.tablet {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__link {
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        text-decoration: none;
+        position: relative;
+        color: v.$gray-light;
+        text-transform: uppercase;
+        transition-property: border-bottom, color;
+        transition-duration: .2s;
+
+        &:hover {
+            border-bottom: 1px solid v.$white;
+            color: v.$white;
+        }
+    }
+}
+
+.active {
+    color: v.$anaranjado;
+
+    &:hover {
+        border-bottom: 1px solid v.$anaranjado;
+        color: v.$anaranjado;
+    }
+}
+
+#navLinks {
+    display: none;
+    
+    @include m.tablet {
+        display: flex;
+    }
+    
+    &.desplegado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: v.$black;
+        width: 100%;
+        padding: 1rem;
+    }
+}

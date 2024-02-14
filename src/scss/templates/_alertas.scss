@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.alerta {
+    padding: 1rem 1rem 1rem 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 1rem;
+    font-size: 1.2rem;
+    width: 35rem;
+
+    &.error {
+        background-color: lighten(v.$red, 55%);
+        border-left: .5rem solid v.$red;
+        color: v.$red;
+    }
+
+    &.exito {
+        background-color: lighten(v.$green, 55%);
+        border-left: .5rem solid v.$green;
+        color: v.$green;
+    }
+}

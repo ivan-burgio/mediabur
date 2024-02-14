@@ -1,0 +1,110 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    font-size: 50%;
+    box-sizing: border-box;
+    height: 100%;
+}
+body {
+    font-family: v.$fuente_textos;
+    color: v.$white;
+    font-size: 1.6rem;
+    min-height: 100%;
+    background-color: v.$black;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+.btnGeneral {
+    @include m.boton(v.$anaranjado, v.$black);
+    margin: 1rem 3rem 3rem;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+
+    &:hover {
+        text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
+        background-color: v.$marron;
+    }
+}
+
+.btnGeneral--disabled {
+    @extend .btnGeneral;
+    background-color: v.$anaranjado-disabled;
+    color: v.$gray;
+    
+    &:hover {
+        cursor: not-allowed;
+        background-color: v.$marron-disabled;
+        color: v.$white-disabled;
+    }
+}
+
+.btnGeneral_admin {
+    @include m.boton(v.$anaranjado, v.$black);
+    margin: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    width: 100% !important;
+
+    &:hover {
+        text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
+        background-color: v.$marron;
+    }
+}
+
+.btnGeneral_admin--disabled {
+    @extend .btnGeneral_admin;
+    background-color: v.$anaranjado-disabled;
+    color: v.$gray;
+    
+    &:hover {
+        cursor: not-allowed;
+        background-color: v.$marron-disabled;
+        color: v.$white-disabled;
+    }
+}
+
+.edit {
+    background-color: v.$blue;
+    color: v.$white;
+
+    &:hover {
+        background-color: darken(v.$blue, 15);
+    }
+}
+
+.delete {
+    background-color: v.$red;
+    color: v.$white;
+    margin: 0;
+    
+    &:hover {
+        background-color: darken(v.$red, 15);
+    }
+}
+
+.create {
+    background-color: v.$green;
+    color: v.$white;
+    
+    &:hover {
+        background-color: darken(v.$green, 15);
+    }
+}
+
+.none {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
