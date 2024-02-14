@@ -321,7 +321,7 @@ html {
 body {
   font-family: "Almarai", sans-serif;
   color: #FFFFFF;
-  font-size: 1.6rem;
+  font-size: 2rem;
   min-height: 100%;
   background-color: #44271C;
   margin: 0;
@@ -578,6 +578,15 @@ p {
   width: 100%;
   height: 6rem;
   background-color: #000;
+}
+.nav form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.form-control {
+  font-size: 1.8rem;
 }
 
 .fixed {

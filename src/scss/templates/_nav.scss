@@ -9,6 +9,16 @@
     width: 100%;
     height: 6rem;
     background-color: v.$black;
+
+    & form {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
+.form-control {
+    font-size: 1.8rem;
 }
 
 .fixed {
