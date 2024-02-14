@@ -2,11 +2,11 @@
 @use 'base/mixins' as m;
 
 .footer {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    margin-top: 5rem;
     padding: 1rem;
     background-color: v.$black;
     border-top: 1px solid v.$gray;

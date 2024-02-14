@@ -3,11 +3,17 @@
 
 .header {
     height: 20rem;
-    background-color: v.$black;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background: image-set(
+        url(../img/fondo.avif) 1x,
+        url(../img/fondo.webp) 1x,
+        url(../img/fondo.png) 1x
+    ) left top / 50rem;
+
 
     &__contenedor {
         display: flex;
@@ -23,10 +29,11 @@
 
     &__description {
         text-align: center;
+        border-bottom: 1px solid v.$white;
     }
 
     &__img-barras {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
     }
 }

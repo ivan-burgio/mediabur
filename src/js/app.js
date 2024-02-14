@@ -1,1 +1,1 @@
-import './prueba.js';
+import './nav.js';

@@ -16,6 +16,15 @@ body {
     min-height: 100%;
     background-color: v.$marron;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main {
+    width: 80vw;
+    background-color: v.$white;
+    height: 200vh;
+    margin: 0 5rem;
 }
 a {
     text-decoration: none;
