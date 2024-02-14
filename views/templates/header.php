@@ -5,6 +5,6 @@
 
     <div class="header__contenedor">
         <h2 class="header__titulo">Ultibur</h2>
-        <p class="header__description">Descripcion</p>
+        <p class="header__description">Blog de tecnología y videojuegos.</p>
     </div>
 </header>

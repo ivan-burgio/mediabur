@@ -589,6 +589,9 @@ p {
   margin: 0;
   text-align: center;
 }
+.header__description {
+  text-align: center;
+}
 .header__img-barras {
   width: 5rem;
   height: 5rem;
