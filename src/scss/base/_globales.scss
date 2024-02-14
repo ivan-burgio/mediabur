@@ -14,7 +14,8 @@ body {
     color: v.$white;
     font-size: 1.6rem;
     min-height: 100%;
-    background-color: v.$black;
+    background-color: v.$marron;
+    margin: 0;
 }
 a {
     text-decoration: none;
@@ -36,18 +37,6 @@ img {
     }
 }
 
-.btnGeneral--disabled {
-    @extend .btnGeneral;
-    background-color: v.$anaranjado-disabled;
-    color: v.$gray;
-    
-    &:hover {
-        cursor: not-allowed;
-        background-color: v.$marron-disabled;
-        color: v.$white-disabled;
-    }
-}
-
 .btnGeneral_admin {
     @include m.boton(v.$anaranjado, v.$black);
     margin: 1rem;
@@ -58,18 +47,6 @@ img {
     &:hover {
         text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
         background-color: v.$marron;
-    }
-}
-
-.btnGeneral_admin--disabled {
-    @extend .btnGeneral_admin;
-    background-color: v.$anaranjado-disabled;
-    color: v.$gray;
-    
-    &:hover {
-        cursor: not-allowed;
-        background-color: v.$marron-disabled;
-        color: v.$white-disabled;
     }
 }
 
