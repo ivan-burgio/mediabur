@@ -323,7 +323,10 @@ body {
   color: #FFFFFF;
   font-size: 2rem;
   min-height: 100%;
-  background-color: #44271C;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, #000 0%, #44271C 20%, #000 40%, #000 60%, #44271C 75%, #000 100%);
+  background-repeat: repeat;
+  background-size: contain;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -331,7 +334,7 @@ body {
 }
 
 main {
-  width: 80vw;
+  width: 75vw;
   background-color: #FFFFFF;
   height: 200vh;
   margin: 0 5rem;
@@ -344,75 +347,6 @@ a {
 img {
   width: 100%;
   height: auto;
-}
-
-.btnGeneral {
-  background-color: #FF8C00;
-  padding: 1.2rem 3.5rem;
-  color: #000;
-  font-size: 1.6rem;
-  display: inline-block;
-  font-weight: 700;
-  border: none;
-  transition-property: background-color, color, text-shadow;
-  transition-duration: 0.2s;
-  text-align: center;
-  display: block;
-  width: 80%;
-  border-radius: 0.5rem;
-  margin: 1rem 3rem 3rem;
-  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-  font-size: 2.5rem;
-}
-@media (min-width: 768px) {
-  .btnGeneral {
-    width: auto;
-  }
-}
-.btnGeneral:hover {
-  background-color: #995400;
-  color: #FFFFFF;
-  cursor: pointer;
-  text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
-}
-.btnGeneral:hover {
-  text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
-  background-color: #44271C;
-}
-
-.btnGeneral_admin {
-  background-color: #FF8C00;
-  padding: 1.2rem 3.5rem;
-  color: #000;
-  font-size: 1.6rem;
-  display: inline-block;
-  font-weight: 700;
-  border: none;
-  transition-property: background-color, color, text-shadow;
-  transition-duration: 0.2s;
-  text-align: center;
-  display: block;
-  width: 80%;
-  border-radius: 0.5rem;
-  margin: 1rem;
-  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-  font-size: 1.5rem;
-  width: 100% !important;
-}
-@media (min-width: 768px) {
-  .btnGeneral_admin {
-    width: auto;
-  }
-}
-.btnGeneral_admin:hover {
-  background-color: #995400;
-  color: #FFFFFF;
-  cursor: pointer;
-  text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
-}
-.btnGeneral_admin:hover {
-  text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
-  background-color: #44271C;
 }
 
 .edit {
@@ -578,6 +512,15 @@ p {
   width: 100%;
   height: 6rem;
   background-color: #000;
+  font-size: 1.8rem;
+}
+.nav-link {
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.nav-link:hover {
+  color: #FCA311;
+  border-bottom: 1px solid #FCA311;
 }
 .nav form {
   display: flex;
@@ -594,6 +537,14 @@ p {
   top: 0;
 }
 
+.dropdown-item {
+  font-size: 1.5rem;
+}
+
+.activo {
+  color: #FCA311;
+}
+
 .header {
   height: 20rem;
   width: 100%;
@@ -601,6 +552,7 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 10rem;
   background: image-set(url(../img/fondo.avif) 1x, url(../img/fondo.webp) 1x, url(../img/fondo.png) 1x) left top/50rem;
 }
 .header__contenedor {
@@ -610,6 +562,7 @@ p {
   align-items: center;
 }
 .header__titulo {
+  text-transform: uppercase;
   margin: 0;
   text-align: center;
 }
