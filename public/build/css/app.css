@@ -320,7 +320,7 @@ html {
 
 body {
   font-family: "Almarai", sans-serif;
-  color: #FFFFFF;
+  color: #000;
   font-size: 2rem;
   min-height: 100%;
   background: rgb(0, 0, 0);
@@ -334,10 +334,14 @@ body {
 }
 
 main {
-  width: 70vw;
+  width: 85vw;
   background-color: #FFFFFF;
   height: 200vh;
   margin: 0 5rem;
+  padding: 5rem 3rem;
+  display: grid;
+  grid-template-columns: 10fr 3fr;
+  gap: 2rem;
 }
 
 a {
@@ -347,6 +351,15 @@ a {
 img {
   width: 100%;
   height: auto;
+}
+
+.main_contenido {
+  border-right: 0.5px solid #44271C;
+  padding-right: 2rem;
+}
+
+.ad {
+  background-color: #c3c1c1;
 }
 
 .edit {
@@ -394,7 +407,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 4rem;
 }
 
 h2 {
@@ -406,7 +419,7 @@ h3 {
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.8;
 }
 
@@ -420,93 +433,6 @@ p {
 
 .descripcion-pagina {
   text-align: center;
-}
-
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.intro__welcome {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-  margin-bottom: 15rem;
-  background-image: image-set(url(../img/fondo-prog.avif) 1x, url(../img/fondo-prog.webp) 1x, url(../img/fondo-prog.png) 1x);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-@media (min-width: 768px) {
-  .intro__welcome {
-    padding: 6rem;
-  }
-}
-.intro__welcome::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(270deg, rgba(138, 55, 10, 0.650297619) 0%, rgba(70, 26, 3, 0.65) 100%);
-  z-index: 1;
-}
-.intro__welcome__titule {
-  padding: 1rem;
-  margin-top: 10rem;
-  z-index: 2;
-  font-size: 4rem;
-}
-@media (min-width: 768px) {
-  .intro__welcome__titule {
-    font-size: 7rem;
-  }
-}
-@media (min-width: 992px) {
-  .intro__welcome__titule {
-    font-size: 8rem;
-  }
-}
-.intro__welcome__name {
-  padding: 1rem;
-  color: #FF8C00;
-  z-index: 2;
-  font-size: 5rem;
-}
-@media (min-width: 768px) {
-  .intro__welcome__name {
-    font-size: 7rem;
-  }
-}
-@media (min-width: 992px) {
-  .intro__welcome__name {
-    font-size: 9rem;
-  }
-}
-.intro-txt, .intro-txt-center {
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 1.5rem;
-  z-index: 2;
-  min-width: 90vw;
-}
-@media (min-width: 768px) {
-  .intro-txt, .intro-txt-center {
-    font-size: 2rem;
-  }
-}
-.intro-txt-center {
-  text-align: center;
-}
-.intro__moreinfo {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15rem;
-  align-items: center;
 }
 
 .nav {
@@ -560,35 +486,45 @@ p {
   justify-content: space-around;
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, #44271C 0%, #000 50%);
+  color: #FFFFFF;
 }
 .header__contenedor, .header__contenedor-row {
   display: flex;
   flex-direction: column;
   margin: 5rem;
   align-items: center;
+  border-radius: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.header__contenedor:hover, .header__contenedor-row:hover {
+  cursor: pointer;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, #20120d 0%, #000 50%);
 }
 .header__contenedor-row {
   flex-direction: row;
 }
 .header__contenedor-row p {
   text-transform: uppercase;
-  margin: 2rem;
+  margin: 0;
 }
 .header__titulo {
+  text-decoration: none;
+  color: #FFFFFF;
   text-transform: uppercase;
   margin: 0;
   text-align: center;
 }
 .header__description {
+  text-decoration: none;
   text-align: center;
-  border-bottom: 1px solid #FFFFFF;
+  color: #FFFFFF;
 }
 .header__img-barras {
   width: 6rem;
   height: 6rem;
-}
-.header__img-barras:hover {
-  cursor: pointer;
 }
 
 .footer {
@@ -599,7 +535,6 @@ p {
   flex-direction: row;
   padding: 1rem;
   background-color: #000;
-  border-top: 1px solid #313131;
 }
 .footer__logo {
   background-image: image-set(url(../img/logo2.avif) 1x, url(../img/logo2.webp) 1x, url(../img/logo2.png) 1x);
@@ -664,7 +599,7 @@ p {
   height: 6rem;
   margin: 1rem;
   z-index: 3;
-  background-color: #696969;
+  background-color: #c3c1c1;
   border-radius: 50%;
   transition-property: background-color;
   transition-duration: 0.2s;

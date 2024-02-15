@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 
 .sidebar {
-    background-color: v.$marron;
+    background-color: v.$terciario;
     height: 100vh;
     display: none;
     flex-direction: column;

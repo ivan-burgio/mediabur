@@ -11,11 +11,11 @@ html {
 }
 body {
     font-family: v.$fuente_textos;
-    color: v.$white;
+    color: v.$black;
     font-size: 2rem;
     min-height: 100%;
     background: rgb(0,0,0);
-    background: linear-gradient(90deg, v.$black 0%, v.$marron 20%, v.$marron 75%, v.$black 100%);
+    background: linear-gradient(90deg, v.$black 0%, v.$terciario 20%, v.$terciario 75%, v.$black 100%);
     background-repeat: repeat;
     background-size: contain;
     margin: 0;
@@ -24,10 +24,14 @@ body {
     align-items: center;
 }
 main {
-    width: 70vw;
+    width: 85vw;
     background-color: v.$white;
     height: 200vh;
     margin: 0 5rem;
+    padding: 5rem 3rem;
+    display: grid;
+    grid-template-columns: 10fr 3fr;
+    gap: 2rem;
 }
 a {
     text-decoration: none;
@@ -35,6 +39,15 @@ a {
 img {
     width: 100%;
     height: auto;
+}
+
+.main_contenido {
+    border-right: .5px solid v.$terciario;
+    padding-right: 2rem;
+}
+
+.ad {
+    background-color: v.$gray-light;
 }
 
 .edit {

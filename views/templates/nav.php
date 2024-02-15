@@ -1,8 +1,8 @@
 <nav class="nav nav-pills">
-    <?php imprimirEnlace('/','Noticias'); ?>
-    <?php imprimirEnlace('#','Analisis'); ?>
-    <?php imprimirEnlace('#','Articulos'); ?>
-    <?php imprimirEnlace('#','Guias'); ?>
+    <?php imprimirEnlace('/noticias','Noticias'); ?>
+    <?php imprimirEnlace('/analisis','Analisis'); ?>
+    <?php imprimirEnlace('/articulos','Articulos'); ?>
+    <?php imprimirEnlace('/guias','Guias'); ?>
 
     <!-- <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Categorias</a>

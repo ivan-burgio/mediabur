@@ -9,13 +9,24 @@
     align-items: center;
     justify-content: space-around;
     background: rgb(0,0,0);
-    background: linear-gradient(180deg, v.$marron 0%, v.$black 50%);
+    background: linear-gradient(180deg, v.$terciario 0%, v.$black 50%);
+    color: v.$white;
 
     &__contenedor {
         display: flex;
         flex-direction: column;
         margin: 5rem;
         align-items: center;
+        border-radius: .5rem;
+        justify-content: center;
+        padding: 1rem;
+        gap: 1rem;
+
+        &:hover {
+            cursor: pointer;
+            background: rgb(0,0,0);
+            background: linear-gradient(0deg, darken(v.$terciario, 10) 0%, v.$black 50%);
+        }
 
         &-row {
             @extend .header__contenedor;
@@ -23,28 +34,27 @@
 
             p {
                 text-transform: uppercase;
-                margin: 2rem;
+                margin: 0;
             }
         }
     }
 
     &__titulo {
+        text-decoration: none;
+        color: v.$white;
         text-transform: uppercase;
         margin: 0;
         text-align: center;
     }
 
     &__description {
+        text-decoration: none;
         text-align: center;
-        border-bottom: 1px solid v.$white;
+        color: v.$white;
     }
 
     &__img-barras {
         width: 6rem;
         height: 6rem;
-
-        &:hover {
-            cursor: pointer;
-        }
     }
 }

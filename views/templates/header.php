@@ -4,8 +4,8 @@
         <p>Categorias</p>
     </div>
 
-    <div class="header__contenedor">
+    <a href="/" class="header__contenedor">
         <h2 class="header__titulo">Ultibur</h2>
         <p class="header__description">Blog de tecnología y videojuegos.</p>
-    </div>
+    </a>
 </header>
