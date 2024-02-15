@@ -9,7 +9,7 @@ class PagesController {
 
         // Render a la vista
         $router->render('pages/intro', [
-            'titulo_pestaña' => 'Inicio',
+            'titulo_pestaña' => 'Noticias',
         ]);
     }
 }
