@@ -1,7 +1,56 @@
 @use "base/variables" as v;
 @use "base/mixins" as m;
 
+.novedades {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
 .novedad {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30rem;
+    border: 1px dashed v.$terciario;
+    border-radius: 2rem;
+
+    &__contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 60%;
+        gap: 1rem;
+    }
+    
+    &__titulo {
+        padding: 1rem;
+        margin: 0;
+        text-align: left;
+        width: 100%;
+        background-color: violet;
+    }
+
+    &__tipo {
+        background-color: green;
+    }
+    
+    &__fecha {
+        background-color: rosybrown;
+    }
+    
+    &__img {
+        width: 50%;
+        height: 100%;
+        border-radius: 5rem;
+        background-color: yellow;
+    }
+}
+
+/* ESTILOS DEL SEGUNDO TIPO DE CARTA DE NOVEDADES
+.novedad2 {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -24,6 +73,7 @@
         margin: 0;
         text-align: left;
         width: 100%;
+        background-color: violet;
     }
     
     &__info {
@@ -31,8 +81,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 0 1rem;
+        padding: 1rem;
+        padding-right: 5rem;
         width: 100%;
+        background-color: green;
         
         &-tipo {
         }
@@ -45,15 +97,17 @@
         width: 100%;
         height: 60%;
         border-radius: 5rem;
+        background-color: yellow;
     }
     
     &__texto {
         padding: 1rem;
         width: 40%;
-        height: 100%;
+        height: 39rem;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 12;
         overflow: hidden;
     }
 }
+*/

@@ -1,17 +1,29 @@
 <div class="novedades contenedor">
     <div class="novedad">
+        <img class="novedad__img" src="" alt="imagen del articulo">
+
         <div class="novedad__contenido">
             <h3 class="novedad__titulo">Titulo del articulo</h3>
 
-            <div class="novedad__info">
-                <p class="novedad__info-tipo">Tipo de articulo</p>
-                <p class="novedad__info-fecha">Fecha de publicacion</p>
+            <p class="novedad__tipo">Tipo de articulo</p>
+            <p class="novedad__fecha">Fecha de publicacion</p>
+        </div>
+    </div>
+
+<!-- SEGUNDO TIPO DE CARTAS DE NOVEDADES
+    <div class="novedad2">
+        <div class="novedad2__contenido">
+            <h3 class="novedad2__titulo">Titulo del articulo</h3>
+
+            <div class="novedad2__info">
+                <p class="novedad2__info-tipo">Tipo de articulo</p>
+                <p class="novedad2__info-fecha">Fecha de publicacion</p>
             </div>
 
-            <img class="novedad__img" src="" alt="imagen del articulo">
+            <img class="novedad2__img" src="" alt="imagen del articulo">
         </div>
 
-        <div class="novedad__texto">
+        <div class="novedad2__texto">
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ratione obcaecati aperiam mollitia? Suscipit facilis eum veniam accusantium, dignissimos natus, molestias nam odio dolore illo mollitia fugit, quis saepe blanditiis.
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore reprehenderit, modi maiores officiis a beatae porro nesciunt tenetur, omnis hic sed vitae maxime libero eum fuga corrupti sunt facere quisquam?
@@ -20,4 +32,5 @@
             </p>
         </div>
     </div>
+-->
 </div>
