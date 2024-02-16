@@ -20,11 +20,7 @@
     <?php include_once __DIR__ . '/templates/header.php'; ?>
     <?php include_once __DIR__ . '/templates/nav.php'; ?>
     <main>
-        <div class="main_contenido">
-            <h1><?php echo $titulo_pagina; ?></h1>
-            <?php echo $contenido; ?>
-        </div>
-        <div class="ad"></div>
+        <?php echo $contenido; ?>
     </main>
     <?php include_once __DIR__ . '/templates/footer.php';?>
     <script src="/build/js/main.min.js" defer></script>

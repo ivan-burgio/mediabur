@@ -26,12 +26,10 @@ body {
 main {
     width: 85vw;
     background-color: v.$white;
-    height: 200vh;
-    margin: 0 5rem;
+    display: flex;
+    flex-direction: column;
     padding: 5rem 3rem;
-    display: grid;
-    grid-template-columns: 10fr 3fr;
-    gap: 2rem;
+    gap: 5rem;
 }
 a {
     text-decoration: none;
@@ -42,12 +40,15 @@ img {
 }
 
 .main_contenido {
-    border-right: .5px solid v.$terciario;
-    padding-right: 2rem;
+    display: grid;
+    grid-template-columns: 8fr 3fr;
+    gap: 2rem;
 }
 
-.ad {
-    background-color: v.$gray-light;
+.main_principal {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 }
 
 .edit {
@@ -84,9 +85,4 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.btn-search {
-    background-color: v.$black;
-    border: none;
 }

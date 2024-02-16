@@ -1,0 +1,46 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tarjeta-clasica {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30rem;
+    border: 1px dashed v.$terciario;
+    border-radius: 2rem;
+
+    &__contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 60%;
+        gap: 1rem;
+    }
+    
+    &__titulo {
+        padding: 1rem;
+        margin: 0;
+        text-align: left;
+        width: 100%;
+        background-color: violet;
+    }
+
+    &__tipo {
+        padding: 1rem;
+        background-color: green;
+    }
+    
+    &__fecha {
+        padding: 1rem;
+        background-color: rosybrown;
+    }
+    
+    &__img {
+        width: 50%;
+        height: 100%;
+        border-radius: 3rem;
+        background-color: yellow;
+    }
+}
