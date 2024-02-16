@@ -1,4 +1,5 @@
 <nav class="nav nav-pills">
+    <?php imprimirEnlace('/','Novedades'); ?>
     <?php imprimirEnlace('/noticias','Noticias'); ?>
     <?php imprimirEnlace('/analisis','Analisis'); ?>
     <?php imprimirEnlace('/articulos','Articulos'); ?>

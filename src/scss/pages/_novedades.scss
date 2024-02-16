@@ -1,3 +1,59 @@
 @use "base/variables" as v;
 @use "base/mixins" as m;
 
+.novedad {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40rem;
+    border: 1px dashed v.$terciario;
+    border-radius: 2rem;
+
+    &__contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 60%;
+        gap: 1rem;
+    }
+    
+    &__titulo {
+        padding: 1rem;
+        margin: 0;
+        text-align: left;
+        width: 100%;
+    }
+    
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        width: 100%;
+        
+        &-tipo {
+        }
+        
+        &-fecha {
+        }
+    }
+    
+    &__img {
+        width: 100%;
+        height: 60%;
+        border-radius: 5rem;
+    }
+    
+    &__texto {
+        padding: 1rem;
+        width: 40%;
+        height: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 12;
+        overflow: hidden;
+    }
+}

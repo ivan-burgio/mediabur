@@ -21,6 +21,7 @@
     <?php include_once __DIR__ . '/templates/nav.php'; ?>
     <main>
         <div class="main_contenido">
+            <h1><?php echo $titulo_pagina; ?></h1>
             <?php echo $contenido; ?>
         </div>
         <div class="ad"></div>
