@@ -33,9 +33,7 @@ function aos_animacion(): void {
 function imprimirEnlace($ruta, $nombre) {
     $clase = ($_SERVER['REQUEST_URI'] === $ruta) ? 'activo' : '';
     echo '
-        <div class="nav-item">
-            <a href="' . $ruta . '" class="nav-link ' . $clase . '">' . $nombre . '</a>
-        </div>
+        <a href="' . $ruta . '" class="nav-link ' . $clase . '">' . $nombre . '</a>
     ';
 }
 
