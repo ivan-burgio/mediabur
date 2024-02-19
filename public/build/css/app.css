@@ -553,7 +553,7 @@ p {
   background-color: #000;
   box-shadow: 0 -0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
 }
-.footer__contenedor, .footer__contenedor2 {
+.footer__contenedor, .footer__contenedor2, .footer__contenedor3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -564,9 +564,13 @@ p {
   height: 100%;
   justify-content: space-between;
 }
-.footer__contenedor2 {
+.footer__contenedor2, .footer__contenedor3 {
   border: none;
   align-items: flex-start;
+}
+.footer__contenedor3 {
+  width: 100%;
+  align-items: center;
 }
 .footer__nav {
   display: flex;

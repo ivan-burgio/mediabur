@@ -23,4 +23,6 @@
 
         <p class="footer__nav-link">Copyright © ULTIBUR 2024 | Todos los derechos reservados</p>
     </div>
+
+    <div class="footer__contenedor3"></div>
 </footer>
