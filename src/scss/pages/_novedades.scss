@@ -1,13 +1,6 @@
 @use "base/variables" as v;
 @use "base/mixins" as m;
 
-.novedades {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    padding-right: 2rem;
-}
-
 .novedades-noticias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

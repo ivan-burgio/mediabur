@@ -51,6 +51,13 @@ img {
     gap: 5rem;
 }
 
+.tarjetas {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding-right: 2rem;
+}
+
 .edit {
     background-color: v.$blue;
     color: v.$white;
