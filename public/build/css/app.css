@@ -699,6 +699,24 @@ p {
   height: 20rem;
 }
 
+.categorias {
+  display: none;
+  flex-direction: row;
+  position: fixed;
+  width: 50rem;
+  height: 50rem;
+  background-color: #FFFFFF;
+  border: 1px solid #000;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.categorias__secciones {
+  display: flex;
+  flex-direction: column;
+}
+
 .sidebar {
   background-color: #44271C;
   height: 100vh;

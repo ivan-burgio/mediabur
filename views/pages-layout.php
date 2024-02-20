@@ -20,6 +20,7 @@
     <?php include_once __DIR__ . '/templates/header.php'; ?>
     <?php include_once __DIR__ . '/templates/nav.php'; ?>
     <main>
+        <?php include_once __DIR__ . '/templates/categorias.php'; ?>
         <?php echo $contenido; ?>
     </main>
     <?php include_once __DIR__ . '/templates/footer.php';?>

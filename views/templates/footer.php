@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer__contenedor">
         <div class="footer__img">
-            <img class="footer__img-barras" src="/build/img/barras.svg" alt="imagen barras">
+            <img class="footer__img-barras barras" src="/build/img/barras.svg" alt="imagen barras">
         </div>
 
         <div class="footer__nav">
