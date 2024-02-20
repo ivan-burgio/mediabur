@@ -1,10 +1,11 @@
 const barras = document.querySelectorAll('.barras');
 const categorias = document.querySelector('#categorias');
+const screen = document.querySelector('.categorias__screen');
 
 // Agrega evento de clic a los elementos con la clase 'barras'
 barras.forEach(barra => {
     barra.addEventListener('click', () => {
-        categorias.classList.add('d-flex');
+        screen.classList.add('d-flex');
     });
 });
 
@@ -12,6 +13,6 @@ barras.forEach(barra => {
 document.addEventListener('click', (event) => {
     // Verifica si el clic no ocurrió dentro del contenedor
     if (!categorias.contains(event.target) && !event.target.classList.contains('barras')) {
-        categorias.classList.remove('d-flex');
+        screen.classList.remove('d-flex');
     }
 });
