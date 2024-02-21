@@ -4,7 +4,7 @@
 .categorias {
     display: flex;
     flex-direction: column;
-    width: 70rem;
+    width: 100rem;
     height: 70rem;
     margin: 1rem;
     align-items: center;
@@ -12,6 +12,20 @@
     background-color: v.$white;
     padding: 3rem;
     border-radius: 3rem;
+
+    &__titulo {
+        padding: 1rem ;
+        text-transform: uppercase;
+
+        &--icono {
+            width: 3rem;
+            height: 3rem;
+            color: v.$black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 
     &__screen {
         display: none;
@@ -26,23 +40,30 @@
     }
 
     &__seccion {
-        display: flex;
-        flex-direction: row;
-        place-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
         height: 100%;
+        padding: 0 1rem;
         
         &--columna {
             display: flex;
             flex-direction: column;
-            width: 20rem;
             height: 100%;
+            width: 100%;
             justify-content: flex-start;
+        }
+
+        &--columna2 {
+            @extend .categorias__seccion--columna;
+            
+            flex-wrap: wrap;
         }
 
         &--link {
             text-transform: uppercase;
             color: v.$black;
-            padding: 2rem;
+            margin: 2rem;
             
             &:hover {
                 cursor: pointer;
