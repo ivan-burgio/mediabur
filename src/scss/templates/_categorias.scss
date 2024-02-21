@@ -2,12 +2,16 @@
 @use 'base/mixins' as m;
 
 .categorias {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
+    width: 70rem;
+    height: 70rem;
+    margin: 1rem;
+    align-items: center;
+    justify-content: space-between;
     background-color: v.$white;
-    width: 65rem;
+    padding: 3rem;
     border-radius: 3rem;
-    padding: 1rem;
 
     &__screen {
         display: none;
@@ -21,26 +25,29 @@
         justify-content: center;
     }
 
-    &__secciones {
+    &__seccion {
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 1rem;
-        justify-content: flex-start;
-    }
-
-    &__link {
-        text-transform: uppercase;
-        color: v.$black;
-        padding: 1rem;
-
-        &:nth-child(odd) {
-            background-color: v.$gray-light2;
-        }
+        flex-direction: row;
+        place-items: center;
+        height: 100%;
         
-        &:hover {
-            cursor: pointer;
-            font-weight: 600;
+        &--columna {
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+            height: 100%;
+            justify-content: flex-start;
+        }
+
+        &--link {
+            text-transform: uppercase;
+            color: v.$black;
+            padding: 2rem;
+            
+            &:hover {
+                cursor: pointer;
+                font-weight: 600;
+            }
         }
     }
 }
