@@ -14,21 +14,23 @@
                 <a href="/guias" class="categorias__seccion--link">Guias</a>
             </div>
 
-            <div class="categorias__seccion2">
-                <div class="categorias__seccion--columna">
-                    <a href="/" class="categorias__seccion--link">Videojuegos</a>
-                    <a href="/" class="categorias__seccion--link">Plataformas</a>
-                    <a href="/" class="categorias__seccion--link">Tecnologia</a>
-                    <a href="/" class="categorias__seccion--link">Programación</a>
-                    <a href="/" class="categorias__seccion--link">Entretenimiento</a>
-                </div>
+            <div class="categorias__seccion--columna">
+                <a href="/" class="categorias__seccion--link">Videojuegos</a>
+                <a href="/" class="categorias__seccion--link">Plataformas</a>
+                <a href="/" class="categorias__seccion--link">Tecnologia</a>
+                <a href="/" class="categorias__seccion--link">Programación</a>
+                <a href="/" class="categorias__seccion--link">Entretenimiento</a>
+            </div>
 
-                <div class="categorias__seccion2--columna">
+            <div class="categorias__seccion--columna flex-row p-0">
+                <div class="categorias__seccion--columna">
                     <a href="/" class="categorias__seccion--link">Novedades</a>
                     <a href="/" class="categorias__seccion--link">Novedades</a>
                     <a href="/" class="categorias__seccion--link">Novedades</a>
                     <a href="/" class="categorias__seccion--link">Novedades</a>
                     <a href="/" class="categorias__seccion--link">Novedades</a>
+                </div>
+                <div class="categorias__seccion--columna">
                     <a href="/" class="categorias__seccion--link">Novedades</a>
                     <a href="/" class="categorias__seccion--link">Novedades</a>
                     <a href="/" class="categorias__seccion--link">Novedades</a>
