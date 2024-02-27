@@ -15,27 +15,95 @@
             </div>
 
             <div class="categorias__seccion--columna">
-                <a href="/" class="categorias__seccion--link">Videojuegos</a>
-                <a href="/" class="categorias__seccion--link">Plataformas</a>
-                <a href="/" class="categorias__seccion--link">Tecnologia</a>
-                <a href="/" class="categorias__seccion--link">Programación</a>
-                <a href="/" class="categorias__seccion--link">Entretenimiento</a>
+                <a class="categorias__seccion--link categoria">Videojuegos</a>
+                <a class="categorias__seccion--link categoria">Plataformas</a>
+                <a class="categorias__seccion--link categoria">Tecnologia</a>
+                <a class="categorias__seccion--link categoria">Programación</a>
+                <a class="categorias__seccion--link categoria">Entretenimiento</a>
             </div>
 
-            <div class="categorias__seccion--columna flex-row p-0">
+            <div class="categorias__seccion--columna subcategorias flex-row p-0" id="subcategorias-videojuegos">
                 <div class="categorias__seccion--columna">
-                    <a href="/" class="categorias__seccion--link">Novedades</a>
-                    <a href="/" class="categorias__seccion--link">Novedades</a>
-                    <a href="/" class="categorias__seccion--link">Novedades</a>
-                    <a href="/" class="categorias__seccion--link">Novedades</a>
-                    <a href="/" class="categorias__seccion--link">Novedades</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
                 </div>
                 <div class="categorias__seccion--columna">
-                    <a href="/" class="categorias__seccion--link">Novedades</a>
-                    <a href="/" class="categorias__seccion--link">Novedades</a>
-                    <a href="/" class="categorias__seccion--link">Novedades</a>
-                    <a href="/" class="categorias__seccion--link">Novedades</a>
-                    <a href="/" class="categorias__seccion--link">Novedades</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                </div>
+            </div>
+
+            <div class="categorias__seccion--columna subcategorias flex-row p-0" id="subcategorias-plataformas">
+                <div class="categorias__seccion--columna">
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                </div>
+                <div class="categorias__seccion--columna">
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                </div>
+            </div>
+
+            <div class="categorias__seccion--columna subcategorias flex-row p-0" id="subcategorias-tecnologia">
+                <div class="categorias__seccion--columna">
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                </div>
+                <div class="categorias__seccion--columna">
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                </div>
+            </div>
+
+            <div class="categorias__seccion--columna subcategorias flex-row p-0" id="subcategorias-programacion">
+                <div class="categorias__seccion--columna">
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                </div>
+                <div class="categorias__seccion--columna">
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                </div>
+            </div>
+
+            <div class="categorias__seccion--columna subcategorias flex-row p-0" id="subcategorias-entretenimineto">
+                <div class="categorias__seccion--columna">
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                </div>
+                <div class="categorias__seccion--columna">
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
+                    <a href="/" class="categorias__seccion--link">subcategoria</a>
                 </div>
             </div>
         </div>

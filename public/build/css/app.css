@@ -740,7 +740,7 @@ p {
 .categorias__seccion {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   height: 100%;
   padding: 0 2rem;
@@ -762,6 +762,10 @@ p {
   cursor: pointer;
   color: #FFFFFF;
   background-color: #7b7979;
+}
+
+.subcategorias {
+  display: none;
 }
 
 .sidebar {
