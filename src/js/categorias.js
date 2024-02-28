@@ -49,4 +49,12 @@ $(document).ready(function() {
             subcategorias[contenidoCategoria].addClass('d-flex');
         }
     });
+
+    categorias.on('click', function() {
+        // Quita la clase 'hover' de todas las categorías
+        categorias.removeClass('hover');
+    
+        // Agrega la clase 'hover' solo a la categoría clickeada
+        $(this).addClass('hover');
+    });
 });

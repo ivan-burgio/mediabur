@@ -15,14 +15,14 @@
             </div>
 
             <div class="categorias__seccion--columna">
-                <p class="categorias__seccion--link categoria">Videojuegos</p>
+                <p class="categorias__seccion--link categoria hover">Videojuegos</p>
                 <p class="categorias__seccion--link categoria">Plataformas</p>
                 <p class="categorias__seccion--link categoria">Tecnologia</p>
                 <p class="categorias__seccion--link categoria">Programación</p>
                 <p class="categorias__seccion--link categoria">Entretenimiento</p>
             </div>
 
-            <div class="categorias__seccion--columna subcategorias flex-row p-0" id="subcategorias-videojuegos">
+            <div class="categorias__seccion--columna subcategorias d-flex flex-row p-0" id="subcategorias-videojuegos">
                 <div class="categorias__seccion--columna">
                     <p href="/" class="categorias__seccion--link">videojuegos</p>
                     <p href="/" class="categorias__seccion--link">videojuegos</p>

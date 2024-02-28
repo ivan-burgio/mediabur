@@ -56,7 +56,6 @@
             flex-direction: column;
             height: 100%;
             justify-content: space-between;
-            align-items: center;
             padding: 1rem;
         }
 
@@ -75,6 +74,11 @@
             }
         }
     }
+}
+
+.hover {
+    color: v.$white;
+    background-color: v.$gray;
 }
 
 .subcategorias {
