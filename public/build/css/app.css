@@ -756,8 +756,7 @@ p {
   text-transform: uppercase;
   color: #000;
   padding: 2rem;
-  max-width: 22rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
 }
 .categorias__seccion--link:hover {
