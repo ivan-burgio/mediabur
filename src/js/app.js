@@ -1,2 +1,2 @@
 import './nav.js';
-import './barras.js';
+import './categorias.js';
