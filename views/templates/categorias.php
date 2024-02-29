@@ -24,86 +24,86 @@
 
             <div class="categorias__seccion--columna subcategorias d-flex flex-row p-0" id="subcategorias-videojuegos">
                 <div class="categorias__seccion--columna">
-                    <p href="/" class="categorias__seccion--link">Novedades</p>
-                    <p href="/" class="categorias__seccion--link">PC</p>
-                    <p href="/" class="categorias__seccion--link">PlayStation</p>
-                    <p href="/" class="categorias__seccion--link">Xbox</p>
-                    <p href="/" class="categorias__seccion--link">Nintendo</p>
+                    <a href="/" class="categorias__seccion--link">Novedades</a>
+                    <a href="/" class="categorias__seccion--link">PC</a>
+                    <a href="/" class="categorias__seccion--link">PlayStation</a>
+                    <a href="/" class="categorias__seccion--link">Xbox</a>
+                    <a href="/" class="categorias__seccion--link">Nintendo</a>
                 </div>
                 <div class="categorias__seccion--columna">
-                    <p href="/" class="categorias__seccion--link">Nuevos</p>
-                    <p href="/" class="categorias__seccion--link">Gratis</p>
-                    <p href="/" class="categorias__seccion--link">Anunciados</p>
-                    <p href="/" class="categorias__seccion--link">videojuegos</p>
-                    <p href="/" class="categorias__seccion--link">videojuegos</p>
+                    <a href="/" class="categorias__seccion--link">Nuevos</a>
+                    <a href="/" class="categorias__seccion--link">Gratis</a>
+                    <a href="/" class="categorias__seccion--link">Anunciados</a>
+                    <a href="/" class="categorias__seccion--link">videojuegos</a>
+                    <a href="/" class="categorias__seccion--link">videojuegos</a>
                 </div>
             </div>
 
             <div class="categorias__seccion--columna subcategorias flex-row p-0" id="subcategorias-plataformas">
                 <div class="categorias__seccion--columna">
-                    <p href="/" class="categorias__seccion--link">Novedades</p>
-                    <p href="/" class="categorias__seccion--link">plataformas</p>
-                    <p href="/" class="categorias__seccion--link">plataformas</p>
-                    <p href="/" class="categorias__seccion--link">plataformas</p>
-                    <p href="/" class="categorias__seccion--link">plataformas</p>
+                    <a href="/" class="categorias__seccion--link">Novedades</a>
+                    <a href="/" class="categorias__seccion--link">plataformas</a>
+                    <a href="/" class="categorias__seccion--link">plataformas</a>
+                    <a href="/" class="categorias__seccion--link">plataformas</a>
+                    <a href="/" class="categorias__seccion--link">plataformas</a>
                 </div>
                 <div class="categorias__seccion--columna">
-                    <p href="/" class="categorias__seccion--link">plataformas</p>
-                    <p href="/" class="categorias__seccion--link">plataformas</p>
-                    <p href="/" class="categorias__seccion--link">plataformas</p>
-                    <p href="/" class="categorias__seccion--link">plataformas</p>
-                    <p href="/" class="categorias__seccion--link">plataformas</p>
+                    <a href="/" class="categorias__seccion--link">plataformas</a>
+                    <a href="/" class="categorias__seccion--link">plataformas</a>
+                    <a href="/" class="categorias__seccion--link">plataformas</a>
+                    <a href="/" class="categorias__seccion--link">plataformas</a>
+                    <a href="/" class="categorias__seccion--link">plataformas</a>
                 </div>
             </div>
 
             <div class="categorias__seccion--columna subcategorias flex-row p-0" id="subcategorias-tecnologia">
                 <div class="categorias__seccion--columna">
-                    <p href="/" class="categorias__seccion--link">Novedades</p>
-                    <p href="/" class="categorias__seccion--link">Inteligencia Artificial</p>
-                    <p href="/" class="categorias__seccion--link">Realidad Virtual</p>
-                    <p href="/" class="categorias__seccion--link">Seguridad</p>
-                    <p href="/" class="categorias__seccion--link">Internet</p>
+                    <a href="/" class="categorias__seccion--link">Novedades</a>
+                    <a href="/" class="categorias__seccion--link">Inteligencia Artificial</a>
+                    <a href="/" class="categorias__seccion--link">Realidad Virtual</a>
+                    <a href="/" class="categorias__seccion--link">Seguridad</a>
+                    <a href="/" class="categorias__seccion--link">Internet</a>
                 </div>
                 <div class="categorias__seccion--columna">
-                    <p href="/" class="categorias__seccion--link">tecnologia</p>
-                    <p href="/" class="categorias__seccion--link">tecnologia</p>
-                    <p href="/" class="categorias__seccion--link">tecnologia</p>
-                    <p href="/" class="categorias__seccion--link">tecnologia</p>
-                    <p href="/" class="categorias__seccion--link">tecnologia</p>
+                    <a href="/" class="categorias__seccion--link">tecnologia</a>
+                    <a href="/" class="categorias__seccion--link">tecnologia</a>
+                    <a href="/" class="categorias__seccion--link">tecnologia</a>
+                    <a href="/" class="categorias__seccion--link">tecnologia</a>
+                    <a href="/" class="categorias__seccion--link">tecnologia</a>
                 </div>
             </div>
 
             <div class="categorias__seccion--columna subcategorias flex-row p-0" id="subcategorias-programacion">
                 <div class="categorias__seccion--columna">
-                    <p href="/" class="categorias__seccion--link">Novedades</p>
-                    <p href="/" class="categorias__seccion--link">Lenguajes</p>
-                    <p href="/" class="categorias__seccion--link">Frameworks</p>
-                    <p href="/" class="categorias__seccion--link">Herramientas</p>
-                    <p href="/" class="categorias__seccion--link">Actualizaciones</p>
+                    <a href="/" class="categorias__seccion--link">Novedades</a>
+                    <a href="/" class="categorias__seccion--link">Lenguajes</a>
+                    <a href="/" class="categorias__seccion--link">Frameworks</a>
+                    <a href="/" class="categorias__seccion--link">Herramientas</a>
+                    <a href="/" class="categorias__seccion--link">Actualizaciones</a>
                 </div>
                 <div class="categorias__seccion--columna">
-                    <p href="/" class="categorias__seccion--link">programacion</p>
-                    <p href="/" class="categorias__seccion--link">programacion</p>
-                    <p href="/" class="categorias__seccion--link">programacion</p>
-                    <p href="/" class="categorias__seccion--link">programacion</p>
-                    <p href="/" class="categorias__seccion--link">programacion</p>
+                    <a href="/" class="categorias__seccion--link">programacion</a>
+                    <a href="/" class="categorias__seccion--link">programacion</a>
+                    <a href="/" class="categorias__seccion--link">programacion</a>
+                    <a href="/" class="categorias__seccion--link">programacion</a>
+                    <a href="/" class="categorias__seccion--link">programacion</a>
                 </div>
             </div>
 
             <div class="categorias__seccion--columna subcategorias flex-row p-0" id="subcategorias-entretenimiento">
                 <div class="categorias__seccion--columna">
-                    <p href="/" class="categorias__seccion--link">Novedades</p>
-                    <p href="/" class="categorias__seccion--link">Anime</p>
-                    <p href="/" class="categorias__seccion--link">Peliculas</p>
-                    <p href="/" class="categorias__seccion--link">Series</p>
-                    <p href="/" class="categorias__seccion--link">Estrenos</p>
+                    <a href="/" class="categorias__seccion--link">Novedades</a>
+                    <a href="/" class="categorias__seccion--link">Anime</a>
+                    <a href="/" class="categorias__seccion--link">Peliculas</a>
+                    <a href="/" class="categorias__seccion--link">Series</a>
+                    <a href="/" class="categorias__seccion--link">Estrenos</a>
                 </div>
                 <div class="categorias__seccion--columna">
-                    <p href="/" class="categorias__seccion--link">entretenimiento</p>
-                    <p href="/" class="categorias__seccion--link">entretenimiento</p>
-                    <p href="/" class="categorias__seccion--link">entretenimiento</p>
-                    <p href="/" class="categorias__seccion--link">entretenimiento</p>
-                    <p href="/" class="categorias__seccion--link">entretenimiento</p>
+                    <a href="/" class="categorias__seccion--link">entretenimiento</a>
+                    <a href="/" class="categorias__seccion--link">entretenimiento</a>
+                    <a href="/" class="categorias__seccion--link">entretenimiento</a>
+                    <a href="/" class="categorias__seccion--link">entretenimiento</a>
+                    <a href="/" class="categorias__seccion--link">entretenimiento</a>
                 </div>
             </div>
         </div>
