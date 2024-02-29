@@ -445,6 +445,23 @@ p {
   gap: 3rem;
 }
 
+.formulario__main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+}
+.formulario__label {
+  background-color: red;
+}
+.formulario__input {
+  background-color: red;
+}
+.formulario__boton {
+  background-color: red;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
