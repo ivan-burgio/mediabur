@@ -133,7 +133,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `password`, `name`, `token`) VALUES
-(1, 'admin@ivan-burgio.com', '$2y$10$i.NX.smYRpwTf5Clgt/XquFrDQF0u2VwlYZu2yVkiDq3sq2L1IsN2', 'Ivan Burgio', '0');
+(1, 'admin@ivan-burgio.com', '$2y$10$oBGA57U1X5MkZHSWocxbEePd/aTrkiXkumhZetLbN2NThtrrBaRd6', 'Ivan Burgio', '0');
 
 --
 -- Índices para tablas volcadas
