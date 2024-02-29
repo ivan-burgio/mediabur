@@ -64,8 +64,6 @@ class PagesController {
     }
 
     public static function guias(Router $router) {
-        session_start();
-        isAuth();
 
         $guias = Guia::all();
 
