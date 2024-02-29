@@ -2,10 +2,17 @@
 
 namespace Controllers;
 
+use Model\Guia;
 use MVC\Router;
+use Model\Noticia;
+use Model\Novedad;
+use Model\Analisis;
+use Model\Articulo;
 
 class PagesController {
     public static function novedades(Router $router) {
+        $ultimasNovedades = Novedad::get(3);
+        $ultimasNoticias = Noticia::get(3);
 
         // Render a la vista
         $router->render('pages/novedades', [
@@ -15,6 +22,7 @@ class PagesController {
     }
 
     public static function noticias(Router $router) {
+        $noticias = Noticia::all();
 
         // Render a la vista
         $router->render('pages/noticias', [
@@ -24,6 +32,7 @@ class PagesController {
     }
 
     public static function analisis(Router $router) {
+        $analisis = Analisis::all();
 
         // Render a la vista
         $router->render('pages/analisis', [
@@ -33,6 +42,7 @@ class PagesController {
     }
 
     public static function articulos(Router $router) {
+        $articulos = Articulo::all();
 
         // Render a la vista
         $router->render('pages/articulos', [
@@ -42,6 +52,7 @@ class PagesController {
     }
 
     public static function guias(Router $router) {
+        $guias = Guia::all();
 
         // Render a la vista
         $router->render('pages/guias', [
