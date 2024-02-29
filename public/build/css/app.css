@@ -445,21 +445,58 @@ p {
   gap: 3rem;
 }
 
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+}
+@media (min-width: 768px) {
+  .formulario {
+    width: 40%;
+  }
+}
 .formulario__main {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: red;
+  gap: 3rem;
 }
 .formulario__label {
-  background-color: red;
+  margin: 1rem 0;
+  width: 100%;
 }
 .formulario__input {
-  background-color: red;
+  width: 100%;
 }
 .formulario__boton {
-  background-color: red;
+  background-color: #44271C;
+  padding: 1.2rem 3.5rem;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color, color, text-shadow;
+  transition-duration: 0.2s;
+  text-align: center;
+  display: block;
+  width: 80%;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .formulario__boton {
+    width: auto;
+  }
+}
+.formulario__boton:hover {
+  background-color: black;
+  color: #FCA311;
+  cursor: pointer;
+  text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
 }
 
 .nav {

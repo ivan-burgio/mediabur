@@ -30,7 +30,7 @@ class LoginController {
                         $_SESSION['login'] = true;
 
                         // Redireccionar
-                        header('Location: /');
+                        header('Location: /dashboard');
                     } else {
                         User::setAlerta('error', 'La contraseña es incorrecta');
                     }

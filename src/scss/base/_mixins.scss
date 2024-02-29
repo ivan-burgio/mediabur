@@ -36,7 +36,7 @@
     }
     &:hover {
         background-color: darken($bgColor, 20);
-        color: v.$white;
+        color: v.$secundario;
         cursor: pointer;
         text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
     }

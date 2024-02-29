@@ -11,6 +11,9 @@ use Model\Articulo;
 
 class PagesController {
     public static function novedades(Router $router) {
+        session_start();
+        isAuth();
+
         $ultimasNovedades = Novedad::get(3);
         $ultimasNoticias = Noticia::get(3);
 
@@ -22,6 +25,9 @@ class PagesController {
     }
 
     public static function noticias(Router $router) {
+        session_start();
+        isAuth();
+
         $noticias = Noticia::all();
 
         // Render a la vista
@@ -32,6 +38,9 @@ class PagesController {
     }
 
     public static function analisis(Router $router) {
+        session_start();
+        isAuth();
+
         $analisis = Analisis::all();
 
         // Render a la vista
@@ -42,6 +51,9 @@ class PagesController {
     }
 
     public static function articulos(Router $router) {
+        session_start();
+        isAuth();
+
         $articulos = Articulo::all();
 
         // Render a la vista
@@ -52,6 +64,9 @@ class PagesController {
     }
 
     public static function guias(Router $router) {
+        session_start();
+        isAuth();
+
         $guias = Guia::all();
 
         // Render a la vista
