@@ -1,16 +1,15 @@
 <aside class="sidebar">
-    <a href="/" class="sidebar__contenedor-logo">
-        <div class="sidebar__logo"></div>
-    </a>
+    <div>ULTIBUR</div>
 
-    <nav class="sidebar__nav">
-        <?php imprimirEnlaceAdmin('/dashboard', 'Dashboard'); ?>
-        <?php imprimirEnlaceAdmin('/dashboard/proyects', 'Proyects'); ?>
-        <?php imprimirEnlaceAdmin('/dashboard/techs', 'Techs'); ?>
-        <?php imprimirEnlaceAdmin('/dashboard/careers', 'Career'); ?>
-    </nav>
-
-    <div class="sidebar__nav">
-        <?php imprimirEnlaceAdmin('/logout', 'Logout'); ?>
+    <div>
+        <ul>
+            <li>Novedades</li>
+            <li>Noticias</li>
+            <li>Guias</li>
+            <li>Articulos</li>
+            <li>Analisis</li>
+        </ul>
     </div>
+
+    <div>user</div>
 </aside>
