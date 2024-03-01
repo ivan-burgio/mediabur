@@ -866,19 +866,26 @@ p {
 .globo__pincho {
   display: none;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
   right: 8rem;
   bottom: 8rem;
-  width: 30rem;
-  height: 50rem;
   padding: 2rem;
   background-color: #FFFFFF;
   border-radius: 3rem 3rem 0 3rem;
   box-shadow: 1px 0px 11px 1px rgb(0, 0, 0);
 }
 .globo__pincho-link {
+  padding: 2rem;
   color: #000;
+}
+.globo__pincho-link:hover {
+  color: #FFFFFF;
+  background-color: #7b7979;
+}
+.globo__pincho-x {
+  margin: 1rem;
+  width: 3rem;
 }
 .globo__pincho-x--icono {
   width: 3rem;

@@ -32,12 +32,10 @@
     &__pincho {
         display: none;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         position: fixed;
         right: 8rem;
         bottom: 8rem;
-        width: 30rem;
-        height: 50rem;
         padding: 2rem;
         background-color: v.$white;
         border-radius: 3rem 3rem 0 3rem;
@@ -45,10 +43,18 @@
         @include m.shadow;
 
         &-link {
+            padding: 2rem;
             color: v.$black;
+
+            &:hover {
+                color: v.$white;
+                background-color: v.$gray;
+            }
         }
 
         &-x {
+            margin: 1rem;
+            width: 3rem;
 
             &--icono {
                 width: 3rem;
