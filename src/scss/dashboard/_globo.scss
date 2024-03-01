@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.globo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 10rem;
+    height: 10rem;
+    background-color: v.$secundario;
+    border-radius: 5rem;
+    cursor: pointer;
+
+    &__icono {
+        font-size: 3rem;
+        color: v.$black;
+    }
+
+    &:hover {
+        background-color: v.$terciario;
+
+        .globo__icono {
+            color: v.$white;
+        }
+    }
+}

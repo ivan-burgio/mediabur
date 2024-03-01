@@ -333,7 +333,7 @@ body {
   align-items: center;
 }
 
-.contenido main {
+main.contenido {
   width: 85vw;
   background-color: #FFFFFF;
   display: flex;
@@ -829,7 +829,7 @@ p {
 }
 
 .sidebar {
-  background-color: red;
+  background-color: red !important;
 }
 
 .dashboard {
@@ -837,5 +837,29 @@ p {
   flex-direction: column;
   height: 100vh;
   width: 100%;
+}
+
+.globo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: #FCA311;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+.globo__icono {
+  font-size: 3rem;
+  color: #000;
+}
+.globo:hover {
+  background-color: #44271C;
+}
+.globo:hover .globo__icono {
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=app.css.map */

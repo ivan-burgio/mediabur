@@ -12,7 +12,7 @@ use Model\Articulo;
 class PagesController {
     public static function novedades(Router $router) {
         session_start();
-        isAuth();
+        isAdmin();
 
         $ultimasNovedades = Novedad::get(3);
         $ultimasNoticias = Noticia::get(3);
@@ -26,7 +26,7 @@ class PagesController {
 
     public static function noticias(Router $router) {
         session_start();
-        isAuth();
+        isAdmin();
 
         $noticias = Noticia::all();
 
@@ -39,7 +39,7 @@ class PagesController {
 
     public static function analisis(Router $router) {
         session_start();
-        isAuth();
+        isAdmin();
 
         $analisis = Analisis::all();
 
@@ -52,7 +52,7 @@ class PagesController {
 
     public static function articulos(Router $router) {
         session_start();
-        isAuth();
+        isAdmin();
 
         $articulos = Articulo::all();
 
@@ -64,6 +64,8 @@ class PagesController {
     }
 
     public static function guias(Router $router) {
+        session_start();
+        isAdmin();
 
         $guias = Guia::all();
 

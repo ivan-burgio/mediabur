@@ -20,6 +20,16 @@ function isAuth(): void {
     }
 }
 
+function isAdmin() {
+    if (isset($_SESSION['login'])) {
+        echo '
+            <div class="globo">
+                <i class="globo__icono fa-solid fa-gear""></i>
+            </div>
+        ';
+    }
+}
+
 function aos_animacion(): void {
     $efectos = ['flip-left', 'flip-right', 'flip-up', 'flip-down'];
     $efecto = array_rand($efectos, 1);
