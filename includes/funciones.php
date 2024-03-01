@@ -24,7 +24,7 @@ function isAdmin() {
     if (isset($_SESSION['login'])) {
         echo '
             <div class="globo">
-                <i class="globo__icono fa-solid fa-gear""></i>
+                <i class="globo__icono fa-solid fa-sliders""></i>
             </div>
 
             <div class="globo__pincho">
