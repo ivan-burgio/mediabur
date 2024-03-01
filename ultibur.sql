@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-02-2024 a las 16:51:49
+-- Tiempo de generación: 01-03-2024 a las 14:27:49
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -32,13 +32,14 @@ CREATE TABLE `analisis` (
   `titulo` varchar(45) DEFAULT NULL,
   `tipo` varchar(45) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
+  `creador` varchar(45) DEFAULT NULL,
+  `categoria` varchar(45) NOT NULL,
   `texto1` longtext DEFAULT NULL,
   `img1` varchar(255) DEFAULT NULL,
   `texto2` longtext DEFAULT NULL,
   `img2` varchar(255) DEFAULT NULL,
   `texto3` longtext DEFAULT NULL,
-  `img3` varchar(255) DEFAULT NULL,
-  `creador` varchar(45) DEFAULT NULL
+  `img3` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -52,13 +53,14 @@ CREATE TABLE `articulos` (
   `titulo` varchar(45) DEFAULT NULL,
   `tipo` varchar(45) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
+  `creador` varchar(45) DEFAULT NULL,
+  `categoria` varchar(45) NOT NULL,
   `texto1` longtext DEFAULT NULL,
   `img1` varchar(255) DEFAULT NULL,
   `texto2` longtext DEFAULT NULL,
   `img2` varchar(255) DEFAULT NULL,
   `texto3` longtext DEFAULT NULL,
-  `img3` varchar(255) DEFAULT NULL,
-  `creador` varchar(45) DEFAULT NULL
+  `img3` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -72,13 +74,14 @@ CREATE TABLE `guias` (
   `titulo` varchar(45) DEFAULT NULL,
   `tipo` varchar(45) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
+  `creador` varchar(45) DEFAULT NULL,
+  `categoria` varchar(45) NOT NULL,
   `texto1` longtext DEFAULT NULL,
   `img1` varchar(255) DEFAULT NULL,
   `texto2` longtext DEFAULT NULL,
   `img2` varchar(255) DEFAULT NULL,
   `texto3` longtext DEFAULT NULL,
-  `img3` varchar(255) DEFAULT NULL,
-  `creador` varchar(45) DEFAULT NULL
+  `img3` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -92,13 +95,14 @@ CREATE TABLE `noticias` (
   `titulo` varchar(45) DEFAULT NULL,
   `tipo` varchar(45) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
+  `creador` varchar(45) DEFAULT NULL,
+  `categoria` varchar(45) NOT NULL,
   `texto1` longtext DEFAULT NULL,
   `img1` varchar(255) DEFAULT NULL,
   `texto2` longtext DEFAULT NULL,
   `img2` varchar(255) DEFAULT NULL,
   `texto3` longtext DEFAULT NULL,
-  `img3` varchar(255) DEFAULT NULL,
-  `creador` varchar(45) DEFAULT NULL
+  `img3` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -111,7 +115,8 @@ CREATE TABLE `todo` (
   `id` int(11) NOT NULL,
   `id_publicacion` int(11) DEFAULT NULL,
   `tipo_publicacion` varchar(45) DEFAULT NULL,
-  `fecha_publicacion` date DEFAULT NULL
+  `fecha_publicacion` date DEFAULT NULL,
+  `categoria_publicacion` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
