@@ -846,20 +846,21 @@ p {
   position: fixed;
   right: 2rem;
   bottom: 2rem;
-  width: 10rem;
-  height: 10rem;
-  background-color: #FCA311;
+  width: 8rem;
+  height: 8rem;
+  background-color: #44271C;
   border-radius: 5rem;
   cursor: pointer;
+  box-shadow: 1px 0px 11px 1px rgb(0, 0, 0);
 }
 .globo__icono {
   font-size: 3rem;
-  color: #000;
+  color: #FFFFFF;
 }
 .globo:hover {
-  background-color: #44271C;
+  background-color: #FCA311;
 }
 .globo:hover .globo__icono {
-  color: #FFFFFF;
+  color: #000;
 }
 /*# sourceMappingURL=app.css.map */

@@ -8,22 +8,24 @@
     position: fixed;
     right: 2rem;
     bottom: 2rem;
-    width: 10rem;
-    height: 10rem;
-    background-color: v.$secundario;
+    width: 8rem;
+    height: 8rem;
+    background-color: v.$terciario;
     border-radius: 5rem;
     cursor: pointer;
 
+    @include m.shadow;
+
     &__icono {
         font-size: 3rem;
-        color: v.$black;
+        color: v.$white;
     }
 
     &:hover {
-        background-color: v.$terciario;
+        background-color: v.$secundario;
 
         .globo__icono {
-            color: v.$white;
+            color: v.$black;
         }
     }
 }
