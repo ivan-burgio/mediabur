@@ -10,7 +10,7 @@
             <a href="/analisis" class="footer__nav-link">Analisis</a>
             <a href="/articulos" class="footer__nav-link">Articulos</a>
             <a href="/guias" class="footer__nav-link">Guias</a>
-            <a href="/dashboard" class="footer__nav-link">Login</a>
+            <a href="/dashboard" class="footer__nav-link">Admin</a>
         </div>
     </div>
 
