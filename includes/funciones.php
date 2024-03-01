@@ -26,6 +26,15 @@ function isAdmin() {
             <div class="globo">
                 <i class="globo__icono fa-solid fa-gear""></i>
             </div>
+
+            <div class="globo__pincho">
+                <a class="globo__pincho-x"><i class="fa-solid fa-x fa-lg globo__pincho-x--icono"></i></a>
+                <a class="globo__pincho-link" href="/dashboard">Dashboard</a>
+                <a class="globo__pincho-link"></a>
+                <a class="globo__pincho-link"></a>
+                <a class="globo__pincho-link"></a>
+                <a class="globo__pincho-link" href="/logout">Logout</a>
+            </div>
         ';
     }
 }

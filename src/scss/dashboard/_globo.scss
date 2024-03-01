@@ -28,4 +28,41 @@
             color: v.$black;
         }
     }
+
+    &__pincho {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        right: 8rem;
+        bottom: 8rem;
+        width: 30rem;
+        height: 50rem;
+        padding: 2rem;
+        background-color: v.$white;
+        border-radius: 3rem 3rem 0 3rem;
+
+        @include m.shadow;
+
+        &-link {
+            color: v.$black;
+        }
+
+        &-x {
+
+            &--icono {
+                width: 3rem;
+                height: 3rem;
+                color: v.$black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+    
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }

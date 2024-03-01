@@ -863,4 +863,33 @@ p {
 .globo:hover .globo__icono {
   color: #000;
 }
+.globo__pincho {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  right: 8rem;
+  bottom: 8rem;
+  width: 30rem;
+  height: 50rem;
+  padding: 2rem;
+  background-color: #FFFFFF;
+  border-radius: 3rem 3rem 0 3rem;
+  box-shadow: 1px 0px 11px 1px rgb(0, 0, 0);
+}
+.globo__pincho-link {
+  color: #000;
+}
+.globo__pincho-x--icono {
+  width: 3rem;
+  height: 3rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.globo__pincho-x--icono:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=app.css.map */
