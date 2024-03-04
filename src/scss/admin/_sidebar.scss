@@ -12,10 +12,14 @@
     &__titulo {
         margin: 2rem;
         padding: 1rem;
-        color: v.$white;
+        color: v.$gray-light;
         font-size: 3rem;
         text-transform: uppercase;
         font-weight: 900;
+
+        &:hover {
+            color:v.$white;
+        }
     }
 
     &__links {
@@ -25,10 +29,14 @@
         padding: 1rem;
 
         &-link {
-            color: v.$white;
+            color: v.$gray-light;
             font-size: 2rem;
             text-transform: uppercase;
             padding: 1rem 0;
+
+            &:hover {
+                color:v.$white;
+            }
         }
     }
 
@@ -36,7 +44,19 @@
         margin: 2rem;
         color: v.$white;
         font-size: 2rem;
-        text-transform: uppercase;
         padding: 1rem;
     }
+}
+
+.dropdown-menu {
+    background-color: v.$gray-light;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.dropdown-item {
+    color: v.$black;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 400;
 }

@@ -839,10 +839,13 @@ p {
 .sidebar__titulo {
   margin: 2rem;
   padding: 1rem;
-  color: #FFFFFF;
+  color: #b6b4b4;
   font-size: 3rem;
   text-transform: uppercase;
   font-weight: 900;
+}
+.sidebar__titulo:hover {
+  color: #FFFFFF;
 }
 .sidebar__links {
   display: flex;
@@ -851,17 +854,32 @@ p {
   padding: 1rem;
 }
 .sidebar__links-link {
-  color: #FFFFFF;
+  color: #b6b4b4;
   font-size: 2rem;
   text-transform: uppercase;
   padding: 1rem 0;
+}
+.sidebar__links-link:hover {
+  color: #FFFFFF;
 }
 .sidebar__user {
   margin: 2rem;
   color: #FFFFFF;
   font-size: 2rem;
-  text-transform: uppercase;
   padding: 1rem;
+}
+
+.dropdown-menu {
+  background-color: #b6b4b4;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.dropdown-item {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 
 .dashboard {
@@ -914,7 +932,7 @@ p {
   bottom: 8rem;
   padding: 2rem;
   background-color: #FFFFFF;
-  border-radius: 3rem 3rem 0 3rem;
+  border-radius: 2rem 2rem 0 2rem;
   box-shadow: 1px 0px 11px 1px rgb(0, 0, 0);
 }
 .globo__pincho-link {
