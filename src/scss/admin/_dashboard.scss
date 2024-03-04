@@ -6,16 +6,19 @@
     flex-direction: column;
     height: 100vh;
     width: 100%;
+    background-color: v.$white;
 
     &__header {
         width: 100%;
         text-align: center;
-        background-color: blue;
+        padding: 2rem;
+        border-bottom: 1px solid v.$black;
     }
     
     &__contenido {
         width: 100%;
         height: 100%;
-        background-color: green;
+        overflow-y: scroll;
+        padding: 2rem;
     }
 }

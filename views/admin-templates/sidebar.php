@@ -4,9 +4,9 @@
     </a>
 
     <div class="sidebar__links">
-        <a class="dropdown-toggle sidebar__links-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <p class="dropdown-toggle sidebar__links-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Noticias
-        </a>
+        </p>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Ver todas las noticias</a></li>
             <li><a class="dropdown-item" href="#">Buscar noticia</a></li>
@@ -15,9 +15,9 @@
             <li><a class="dropdown-item" href="#">Eliminar noticia</a></li>
         </ul>
 
-        <a class="dropdown-toggle sidebar__links-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <p class="dropdown-toggle sidebar__links-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Guias
-        </a>
+        </p>
         <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Ver todas las guias</a></li>
             <li><a class="dropdown-item" href="#">Buscar guia</a></li>
@@ -26,9 +26,9 @@
             <li><a class="dropdown-item" href="#">Eliminar guia</a></li>
         </ul>
 
-        <a class="dropdown-toggle sidebar__links-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <p class="dropdown-toggle sidebar__links-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Articulos
-        </a>
+        </p>
         <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Ver todos los articulos</a></li>
             <li><a class="dropdown-item" href="#">Buscar articulo</a></li>
@@ -37,9 +37,9 @@
             <li><a class="dropdown-item" href="#">Eliminar articulo</a></li>
         </ul>
 
-        <a class="dropdown-toggle sidebar__links-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <p class="dropdown-toggle sidebar__links-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Analisis
-        </a>
+        </p>
         <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Ver todos los analisis</a></li>
             <li><a class="dropdown-item" href="#">Buscar analisis</a></li>
