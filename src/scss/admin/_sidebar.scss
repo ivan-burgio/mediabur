@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: v.$black;
+    padding: 1rem;
+
+    &__titulo {
+        margin: 2rem;
+        padding: 1rem;
+        color: v.$white;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+        padding: 1rem;
+
+        &-link {
+            color: v.$white;
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding: 1rem 0;
+        }
+    }
+
+    &__user {
+        margin: 2rem;
+        color: v.$white;
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 1rem;
+    }
+}

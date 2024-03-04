@@ -1,15 +1,13 @@
 <aside class="sidebar">
-    <div>Mediabur</div>
+    <div class="sidebar__titulo">Mediabur</div>
 
-    <div>
-        <ul>
-            <li>Novedades</li>
-            <li>Noticias</li>
-            <li>Guias</li>
-            <li>Articulos</li>
-            <li>Analisis</li>
-        </ul>
+    <div class="sidebar__links">
+        <a href="/" class="sidebar__links-link">Novedades</a>
+        <a href="/" class="sidebar__links-link">Noticias</a>
+        <a href="/" class="sidebar__links-link">Guias</a>
+        <a href="/" class="sidebar__links-link">Articulos</a>
+        <a href="/" class="sidebar__links-link">Analisis</a>
     </div>
 
-    <div>user</div>
+    <div class="sidebar__user">user</div>
 </aside>
