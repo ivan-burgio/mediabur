@@ -15,14 +15,14 @@
     </div>
 
     <div class="footer__contenedor2">
-        <a href="/" class="footer__titulo">Ultibur</a>
+        <a href="/" class="footer__titulo">Mediabur</a>
 
         <div class="footer__nav">
-            <a class="footer__nav-link" href="">Sobre ULTIBUR</a>
+            <a class="footer__nav-link" href="">Sobre Mediabur</a>
             <a class="footer__nav-link" href="">Información Legal</a>
         </div>
 
-        <p class="footer__nav-link">Copyright © ULTIBUR 2024 | Todos los derechos reservados</p>
+        <p class="footer__nav-link">Copyright © Mediabur 2024 | Todos los derechos reservados</p>
     </div>
 
     <div class="footer__contenedor3"></div>

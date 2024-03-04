@@ -1,5 +1,5 @@
 <aside class="sidebar">
-    <div>ULTIBUR</div>
+    <div>Mediabur</div>
 
     <div>
         <ul>

@@ -5,7 +5,7 @@
     </div>
 
     <a href="/" class="header__contenedor">
-        <h2 class="header__titulo">Ultibur</h2>
+        <h2 class="header__titulo">Mediabur</h2>
         <p class="header__description">Blog de tecnología, entretenimiento y videojuegos.</p>
     </a>
 </header>
