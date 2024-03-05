@@ -54,7 +54,7 @@
     background-color: v.$gray-light;
     border-radius: .5rem;
     padding: 1rem;
-    border: 1px solid v.$black;
+    border: 1px solid darken(v.$gray-light, 10);
 }
 
 .dropdown-item {

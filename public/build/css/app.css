@@ -875,7 +875,7 @@ p {
   background-color: #b6b4b4;
   border-radius: 0.5rem;
   padding: 1rem;
-  border: 1px solid #000;
+  border: 1px solid #9d9a9a;
 }
 
 .dropdown-item {
@@ -944,6 +944,8 @@ p {
 }
 .globo__pincho-link {
   padding: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
   color: #000;
 }
 .globo__pincho-link:hover {
