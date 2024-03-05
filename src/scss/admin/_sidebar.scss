@@ -54,11 +54,11 @@
     background-color: v.$gray-light;
     border-radius: .5rem;
     padding: 1rem;
+    border: 1px solid v.$black;
 }
 
 .dropdown-item {
     color: v.$black;
-    text-transform: uppercase;
     font-size: 1.8rem;
     font-weight: 400;
 }
