@@ -464,12 +464,13 @@ p {
   align-items: center;
   gap: 3rem;
 }
-.formulario__label {
+.formulario__input {
+  padding: 1rem;
   margin: 1rem 0;
   width: 100%;
 }
-.formulario__input {
-  width: 100%;
+.formulario__input:hover {
+  border-color: #FCA311;
 }
 .formulario__boton {
   background-color: #44271C;
@@ -497,6 +498,19 @@ p {
   color: #FCA311;
   cursor: pointer;
   text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+#eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .nav {
@@ -882,7 +896,8 @@ p {
   font-weight: 400;
 }
 .dropdown-item:hover {
-  background-color: #e8e8e8;
+  background-color: #9d9a9a;
+  color: #FFFFFF;
 }
 
 .dashboard {

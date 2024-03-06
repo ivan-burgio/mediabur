@@ -20,13 +20,14 @@
         gap: 3rem;
     }
 
-    &__label {
+    &__input {
+        padding: 1rem;
         margin: 1rem 0;
         width: 100%;
-    }
 
-    &__input {
-        width: 100%;
+        &:hover {
+            border-color: v.$secundario;
+        }
     }
 
     &__boton {
@@ -34,4 +35,17 @@
 
         margin-top: 2rem;
     }
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+#eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
