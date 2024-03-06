@@ -30,7 +30,12 @@
 }
 
 .form-control {
+    border-radius: .5rem;
     font-size: 1.8rem;
+
+    &:hover {
+        border-color: v.$secundario;
+    }
 }
 
 .fixed {

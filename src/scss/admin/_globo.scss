@@ -22,10 +22,10 @@
     }
 
     &:hover {
-        background-color: v.$secundario;
+        background-color: v.$black;
 
         .globo__icono {
-            color: v.$black;
+            color: v.$secundario;
         }
     }
 

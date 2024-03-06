@@ -49,5 +49,9 @@
         </ul>
     </div>
 
+    <div class="sidebar__links">
+        <a href="/logout" class="sidebar__links-link">Logout</a>
+    </div>
+
     <div class="sidebar__user">User: <span class="sidebar__user-name"><?php echo $user_name; ?></span></div>
 </aside>
