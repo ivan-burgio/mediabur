@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-03-2024 a las 15:10:10
+-- Tiempo de generación: 06-03-2024 a las 15:35:44
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -33,7 +33,8 @@ CREATE TABLE `analisis` (
   `tipo` varchar(45) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
   `creador` varchar(45) DEFAULT NULL,
-  `categoria` varchar(45) NOT NULL,
+  `categoria` varchar(45) DEFAULT NULL,
+  `activo` int(11) DEFAULT NULL,
   `texto1` longtext DEFAULT NULL,
   `img1` varchar(255) DEFAULT NULL,
   `texto2` longtext DEFAULT NULL,
@@ -54,7 +55,8 @@ CREATE TABLE `articulos` (
   `tipo` varchar(45) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
   `creador` varchar(45) DEFAULT NULL,
-  `categoria` varchar(45) NOT NULL,
+  `categoria` varchar(45) DEFAULT NULL,
+  `activo` int(11) DEFAULT NULL,
   `texto1` longtext DEFAULT NULL,
   `img1` varchar(255) DEFAULT NULL,
   `texto2` longtext DEFAULT NULL,
@@ -75,7 +77,8 @@ CREATE TABLE `guias` (
   `tipo` varchar(45) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
   `creador` varchar(45) DEFAULT NULL,
-  `categoria` varchar(45) NOT NULL,
+  `categoria` varchar(45) DEFAULT NULL,
+  `activo` int(11) DEFAULT NULL,
   `texto1` longtext DEFAULT NULL,
   `img1` varchar(255) DEFAULT NULL,
   `texto2` longtext DEFAULT NULL,
@@ -96,7 +99,8 @@ CREATE TABLE `noticias` (
   `tipo` varchar(45) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
   `creador` varchar(45) DEFAULT NULL,
-  `categoria` varchar(45) NOT NULL,
+  `categoria` varchar(45) DEFAULT NULL,
+  `activo` int(11) DEFAULT NULL,
   `texto1` longtext DEFAULT NULL,
   `img1` varchar(255) DEFAULT NULL,
   `texto2` longtext DEFAULT NULL,
@@ -116,7 +120,8 @@ CREATE TABLE `todo` (
   `id_publicacion` int(11) DEFAULT NULL,
   `tipo_publicacion` varchar(45) DEFAULT NULL,
   `fecha_publicacion` date DEFAULT NULL,
-  `categoria_publicacion` varchar(45) NOT NULL
+  `categoria_publicacion` varchar(45) DEFAULT NULL,
+  `activo_publicacion` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
