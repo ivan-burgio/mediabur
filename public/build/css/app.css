@@ -872,8 +872,6 @@ p {
 }
 
 .dropdown-menu {
-  background-color: #b6b4b4;
-  border-radius: 0.5rem;
   padding: 1rem;
   border: 1px solid #9d9a9a;
 }
@@ -882,6 +880,9 @@ p {
   color: #000;
   font-size: 1.8rem;
   font-weight: 400;
+}
+.dropdown-item:hover {
+  background-color: #e8e8e8;
 }
 
 .dashboard {

@@ -51,8 +51,6 @@
 }
 
 .dropdown-menu {
-    background-color: v.$gray-light;
-    border-radius: .5rem;
     padding: 1rem;
     border: 1px solid darken(v.$gray-light, 10);
 }
@@ -61,4 +59,8 @@
     color: v.$black;
     font-size: 1.8rem;
     font-weight: 400;
+
+    &:hover {
+        background-color: lighten(v.$gray-light, 20);
+    }
 }
