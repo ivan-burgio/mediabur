@@ -13,8 +13,6 @@
     background-color: v.$terciario;
     border-radius: 5rem;
     cursor: pointer;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, v.$terciario 0%, v.$black 75%);
 
     @include m.shadow;
 
@@ -24,9 +22,11 @@
     }
 
     &:hover {
-        cursor: pointer;
-        background: rgb(0,0,0);
-        background: linear-gradient(0deg, v.$terciario 0%, v.$black 75%);
+        background-color: v.$black;
+
+        .globo__icono {
+            color: v.$secundario;
+        }
     }
 
     &__pincho {

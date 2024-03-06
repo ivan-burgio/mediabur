@@ -474,6 +474,7 @@ p {
   border-color: #FCA311;
 }
 .formulario__boton {
+  background-color: #44271C;
   padding: 1.2rem 3.5rem;
   color: #FFFFFF;
   font-size: 1.6rem;
@@ -486,8 +487,6 @@ p {
   display: block;
   width: 80%;
   border-radius: 0.5rem;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, #44271C 0%, #000 75%);
   margin-top: 2rem;
 }
 @media (min-width: 768px) {
@@ -496,9 +495,10 @@ p {
   }
 }
 .formulario__boton:hover {
+  background-color: black;
+  color: #FCA311;
   cursor: pointer;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, #44271C 0%, #000 75%);
+  text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
 }
 
 .input-container {
@@ -939,8 +939,6 @@ p {
   background-color: #44271C;
   border-radius: 5rem;
   cursor: pointer;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, #44271C 0%, #000 75%);
   box-shadow: 1px 0px 11px 1px rgb(0, 0, 0);
 }
 .globo__icono {
@@ -948,9 +946,10 @@ p {
   color: #FFFFFF;
 }
 .globo:hover {
-  cursor: pointer;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, #44271C 0%, #000 75%);
+  background-color: #000;
+}
+.globo:hover .globo__icono {
+  color: #FCA311;
 }
 .globo__pincho {
   display: none;
