@@ -32,7 +32,7 @@
     }
 
     &__boton {
-        @include m.boton(v.$terciario, v.$white);
+        @include m.boton;
 
         margin-top: 2rem;
     }

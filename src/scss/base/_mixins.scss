@@ -17,10 +17,9 @@
     }
 }
 
-@mixin boton($bgColor, $colorTexto) {
-    background-color: $bgColor;
+@mixin boton {
     padding: 1.2rem 3.5rem;
-    color: $colorTexto;
+    color: v.$white;
     font-size: 1.6rem;
     display: inline-block;
     font-weight: 700;
@@ -31,14 +30,17 @@
     display: block;
     width: 80%;
     border-radius: 0.5rem;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, v.$terciario 0%, v.$black 75%);
+
     @include tablet {
         width: auto;
     }
+
     &:hover {
-        background-color: darken($bgColor, 20);
-        color: v.$secundario;
         cursor: pointer;
-        text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, v.$terciario 0%, v.$black 75%);
     }
 }
 
