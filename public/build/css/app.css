@@ -925,6 +925,18 @@ p {
   height: 100%;
   overflow-y: scroll;
   padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+}
+.dashboard__section {
+  width: 60rem;
+  padding: 2rem;
+}
+
+.grafica {
+  margin-top: 2rem;
 }
 
 .globo {

@@ -8,6 +8,7 @@ use MVC\Router;
 use Model\Noticia;
 use Model\Analisis;
 use Model\Articulo;
+use Model\Novedad;
 
 class DashboardController {
     public static function index(Router $router) {
@@ -16,6 +17,7 @@ class DashboardController {
 
         $user_name = $_SESSION['name'];
 
+        $todo = Novedad::all();
         $noticias = Noticia::all();
         $guias = Guia::all();
         $articulos = Articulo::all();
@@ -26,6 +28,11 @@ class DashboardController {
             'titulo_pestaña' => 'Dashboard',
             'titulo_page' => 'Dashboard',
             'user_name' => $user_name,
+            'todo' => $todo,
+            'noticias' => $noticias,
+            'guias' => $guias,
+            'articulos' => $articulos,
+            'analisis' => $analisis,
         ]);
     }
 }
