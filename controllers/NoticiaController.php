@@ -14,7 +14,7 @@ class NoticiaController {
         $noticias = Noticia::all();
 
         // Render a la vista
-        $router->render('admin/dashboard', [
+        $router->render('admin/general', [
             'titulo_pestaña' => 'Noticias',
             'titulo_page' => 'Noticias',
             'noticias' => $noticias,
@@ -28,6 +28,7 @@ class NoticiaController {
         $user_name = $_SESSION['name'];
         $alertas = [];
         $noticia = new Noticia;
+        $tipo = 'noticia';
     
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -51,10 +52,12 @@ class NoticiaController {
         }
     
         $router->render('admin/crear', [
-            'titulo_pestaña' => 'Dashboard',
-            'titulo_page' => 'Dashboard',
-            'user_name' => $user_name,
+            'titulo_pestaña' => 'Noticias',
+            'titulo_page' => 'Noticias',
             'alertas' => $alertas,
+            'noticias' => $noticia,
+            'user_name' => $user_name,
+            'tipo' => $tipo,
         ]);
     }
 

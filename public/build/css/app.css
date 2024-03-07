@@ -450,7 +450,6 @@ p {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 40vh;
 }
 @media (min-width: 768px) {
   .formulario {
@@ -512,6 +511,10 @@ p {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+}
+
+.textarea {
+  height: 40rem !important;
 }
 
 .nav {
