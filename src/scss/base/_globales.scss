@@ -25,6 +25,7 @@ body {
 }
 main.contenido {
     width: 85vw;
+    min-height: 100vh;
     background-color: v.$white;
     display: flex;
     flex-direction: column;

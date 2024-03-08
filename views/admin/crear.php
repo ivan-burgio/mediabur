@@ -9,10 +9,10 @@
 
             <select class="formulario__input" required>
                 <option value="" selected disabled>Selecciona el tipo de publicacion</option>
-                <option value="categoria2" <?php echo ($tipo == "noticia") ? "selected" : ""; ?>>Noticia</option>
-                <option value="categoria1" <?php echo ($tipo == "guia") ? "selected" : ""; ?>>Guia</option>
-                <option value="categoria3" <?php echo ($tipo == "articulo") ? "selected" : ""; ?>>Articulo</option>
-                <option value="categoria3" <?php echo ($tipo == "analisis") ? "selected" : ""; ?>>Analisis</option>
+                <option value="categoria2" <?php echo ($tipo == "noticia") ? "selected" : "disabled"; ?>>Noticia</option>
+                <option value="categoria1" <?php echo ($tipo == "guia") ? "selected" : "disabled"; ?>>Guia</option>
+                <option value="categoria3" <?php echo ($tipo == "articulo") ? "selected" : "disabled"; ?>>Articulo</option>
+                <option value="categoria3" <?php echo ($tipo == "analisis") ? "selected" : "disabled"; ?>>Analisis</option>
             </select>
 
             <select class="formulario__input" required>

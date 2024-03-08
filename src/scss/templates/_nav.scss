@@ -11,6 +11,7 @@
     background-color: v.$black;
     font-size: 1.8rem;
     box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    z-index: 100;
 
     &-link {
         text-transform: uppercase;

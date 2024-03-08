@@ -31,9 +31,6 @@ class NoticiaController {
         $tipo = 'noticia';
     
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-            $_POST['time2'] = ($_POST['time2'] === '') ? null : $_POST['time2'];
-
             // Leer enlace
             $noticia->sincronizar($_POST);
             
