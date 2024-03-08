@@ -5,9 +5,9 @@
         <?php require_once __DIR__ . '/../templates/alertas.php'; ?>
 
         <form class="formulario" method="POST" action="/dashboard/'<?php echo strtolower($titulo_page); ?>'/crear">
-            <input type="text" class="formulario__input" placeholder="Ingresa un titulo" required>
+            <input name="titulo" type="text" class="formulario__input" placeholder="Ingresa un titulo" required>
 
-            <select class="formulario__input" required>
+            <select name="tipo" class="formulario__input" required>
                 <option value="" selected disabled>Selecciona el tipo de publicacion</option>
                 <option value="categoria2" <?php echo ($tipo == "noticia") ? "selected" : "disabled"; ?>>Noticia</option>
                 <option value="categoria1" <?php echo ($tipo == "guia") ? "selected" : "disabled"; ?>>Guia</option>
@@ -15,7 +15,7 @@
                 <option value="categoria3" <?php echo ($tipo == "analisis") ? "selected" : "disabled"; ?>>Analisis</option>
             </select>
 
-            <select class="formulario__input" required>
+            <select name="categoria" class="formulario__input" required>
                 <option value="" selected disabled>Selecciona una categoría</option>
                 <option value="categoria2">Videojuegos</option>
                 <option value="categoria1">Plataformas</option>
@@ -27,12 +27,13 @@
             <div class="formulario__input d-flex flex-column align-items-center">
                 <label for="activo">¿Va a estar activo?</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="activo" id="activo" value="1" required>
+                    <input name="activo" class="form-check-input" type="checkbox" name="activo" id="activo" value="0">
                     <label class="form-check-label" for="activo">Sí</label>
                 </div>
             </div>
 
             <textarea
+                name="texto"
                 class="formulario__input textarea"
                 rows="50"
                 cols="50"
