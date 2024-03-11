@@ -19,8 +19,7 @@ class PagesController {
 
         // Render a la vista
         $router->render('pages/novedades', [
-            'titulo_pestaña' => 'Novedades',
-            'titulo_pagina' => 'Ultimas Novedades',
+            'titulo' => 'Novedades',
         ]);
     }
 
@@ -32,8 +31,7 @@ class PagesController {
 
         // Render a la vista
         $router->render('pages/noticias', [
-            'titulo_pestaña' => 'Noticias',
-            'titulo_pagina' => 'Noticias',
+            'titulo' => 'Noticias',
         ]);
     }
 
@@ -45,8 +43,7 @@ class PagesController {
 
         // Render a la vista
         $router->render('pages/analisis', [
-            'titulo_pestaña' => 'Analisis',
-            'titulo_pagina' => 'Analisis',
+            'titulo' => 'Analisis',
         ]);
     }
 
@@ -58,8 +55,7 @@ class PagesController {
 
         // Render a la vista
         $router->render('pages/articulos', [
-            'titulo_pestaña' => 'Articulos',
-            'titulo_pagina' => 'Articulos',
+            'titulo' => 'Articulos',
         ]);
     }
 
@@ -71,8 +67,7 @@ class PagesController {
 
         // Render a la vista
         $router->render('pages/guias', [
-            'titulo_pestaña' => 'Guias',
-            'titulo_pagina' => 'Guias',
+            'titulo' => 'Guias',
         ]);
     }
 }

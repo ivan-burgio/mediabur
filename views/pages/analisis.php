@@ -1,6 +1,6 @@
 <div class="main_contenido">
     <div class="main_principal">
-        <h1><?php echo $titulo_pagina; ?></h1>
+        <h1><?php echo $titulo; ?></h1>
 
         <div class="tarjetas">
             <?php echo tarjetaClasicaTemplate('a', 'Titulos de tarjeta 1', 'novedades', 'hoy'); ?>

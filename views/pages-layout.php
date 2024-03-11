@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Ivan Burgio, a programmer who studies Web Development, here you can learn a little more about him, the technologies he knows and his projects.">
-    <title>Mediabur | <?php echo $titulo_pestaña ?> </title>
+    <title>Mediabur | <?php echo $titulo ?> </title>
     <link rel="icon" type="image/png" href="/build/img/logo2.png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

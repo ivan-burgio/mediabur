@@ -15,8 +15,7 @@ class NoticiaController {
 
         // Render a la vista
         $router->render('admin/general', [
-            'titulo_pestaña' => 'Noticias',
-            'titulo_page' => 'Noticias',
+            'titulo' => 'Noticias',
             'noticias' => $noticias,
             'user_name' => $user_name,
         ]);
@@ -28,9 +27,10 @@ class NoticiaController {
         $user_name = $_SESSION['name'];
         $alertas = [];
         $noticia = new Noticia;
+        $url = 'noticias';
         $tipo = 'noticia';
     
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Leer enlace
             $noticia->sincronizar($_POST);
             
@@ -42,19 +42,22 @@ class NoticiaController {
                 // Guardar en la DB
                 $resultado = $noticia->crear();
     
-                if($resultado) {
+                if ($resultado) {
+                    echo "Antes de la redirección";
+                    var_dump($resultado);
                     header('Location: /dashboard/noticias');
+                    exit;
                 }
             }
         }
     
         $router->render('admin/crear', [
-            'titulo_pestaña' => 'Noticias',
-            'titulo_page' => 'Noticias',
+            'titulo' => 'Noticias',
             'alertas' => $alertas,
             'noticias' => $noticia,
             'user_name' => $user_name,
             'tipo' => $tipo,
+            'url' => $url,
         ]);
     }
 
@@ -95,8 +98,7 @@ class NoticiaController {
         }
     
         $router->render('admin/editar', [
-            'titulo_pestaña' => 'Dashboard',
-            'titulo_page' => 'Dashboard',
+            'titulo' => 'Dashboard',
             'user_name' => $user_name,
             'alertas' => $alertas,
         ]);

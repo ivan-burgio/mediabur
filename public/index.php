@@ -10,8 +10,6 @@ use Controllers\ArticuloController;
 use Controllers\LoginController;
 use Controllers\PagesController;
 use Controllers\DashboardController;
-use Model\Analisis;
-use Model\Articulo;
 
 $router = new Router();
 
