@@ -31,6 +31,11 @@ class NoticiaController {
         $tipo = 'noticia';
     
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $fechaActual = date('Y-m-d');
+
+            $noticia->creador = $user_name;
+            $noticia->fecha = $fechaActual;
+
             // Leer enlace
             $noticia->sincronizar($_POST);
             
@@ -43,10 +48,7 @@ class NoticiaController {
                 $resultado = $noticia->crear();
     
                 if ($resultado) {
-                    echo "Antes de la redirección";
-                    var_dump($resultado);
                     header('Location: /dashboard/noticias');
-                    exit;
                 }
             }
         }

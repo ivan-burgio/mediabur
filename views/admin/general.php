@@ -1,4 +1,4 @@
-<div class="dashboard__contenido">
+<div class="dashboard__contenido--general">
     <div class="dashboard__linea--header">
         <div class="dashboard__linea-elem">ID</div>
         <div class="dashboard__linea-elem">Titulo</div>
@@ -15,13 +15,15 @@
     ?>
         <div class="dashboard__linea">
             <div class="dashboard__linea-elem"><?php echo $publicacion->id; ?></div>
-            <div class="dashboard__linea-elem"><?php echo $publicacion->titulo; ?></div>
+            <div class="dashboard__linea-elem--titulo"><?php echo $publicacion->titulo; ?></div>
             <div class="dashboard__linea-elem"><?php echo $publicacion->tipo; ?></div>
             <div class="dashboard__linea-elem"><?php echo $publicacion->fecha; ?></div>
             <div class="dashboard__linea-elem"><?php echo $publicacion->creador; ?></div>
             <div class="dashboard__linea-elem"><?php echo $publicacion->categoria; ?></div>
             <div class="dashboard__linea-elem"><?php echo $publicacion->activo; ?></div>
-            <div class="dashboard__linea-elem">Acciones</div>
+            <div class="dashboard__linea-elem">
+
+            </div>
         </div>
     <?php
     }
