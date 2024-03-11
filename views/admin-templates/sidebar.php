@@ -4,6 +4,10 @@
     </a>
 
     <div class="sidebar__links">
+        <a href="/dashboard" class="sidebar__links-link">Dashboard</a>
+    </div>
+
+    <div class="sidebar__links">
         <p class="dropdown-toggle sidebar__links-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Noticias
         </p>

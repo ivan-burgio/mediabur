@@ -16,7 +16,7 @@ class NoticiaController {
         // Render a la vista
         $router->render('admin/general', [
             'titulo' => 'Noticias',
-            'noticias' => $noticias,
+            'publicaciones' => $noticias,
             'user_name' => $user_name,
         ]);
     }

@@ -1,0 +1,27 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.dashboard {
+    &__linea {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 1rem;
+
+        &--header {
+            @extend .dashboard__linea;
+
+            background-color: v.$gray-light;
+        }
+
+        &-elem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            border: 1px solid black;
+        }
+    }
+}

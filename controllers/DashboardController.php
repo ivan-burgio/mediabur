@@ -25,8 +25,7 @@ class DashboardController {
 
         // Render a la vista
         $router->render('admin/dashboard', [
-            'titulo_pestaña' => 'Dashboard',
-            'titulo_page' => 'Dashboard',
+            'titulo' => 'Dashboard',
             'user_name' => $user_name,
             'todo' => $todo,
             'noticias' => $noticias,

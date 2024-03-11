@@ -1,60 +1,47 @@
-const ctx1 = document.getElementById("chartGeneral1");
-const ctx2 = document.getElementById("chartGeneral2");
-const ctx3 = document.getElementById("chartGeneral3");
+const chartGeneralCategorias = document.getElementById("chartGeneralCategorias");
+const chartGeneralTipos = document.getElementById("chartGeneralTipos");
 
-new Chart(ctx1, {
-    type: "bar",
+new Chart(chartGeneralCategorias, {
+    type: "pie",
     data: {
-        labels: ["Noticias", "Guias", "Articulos", "Analisis"],
+        labels: ["Videojuegos", "Plataformas", "Tecnologia", "Programación", "Entretenimiento"],
         datasets: [
             {
-                label: "# of Votes",
-                data: [12, 19, 3, 5],
+                label: "Publicaciones",
+                data: [12, 19, 3, 5, 20],
                 // data: [$noticias, $guias, $articulos, $analisis],
                 borderWidth: 1,
             },
         ],
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true,
+        plugins: {
+            title: {
+                display: true,
+                text: "Categorias de las publicaciones",
             },
         },
     },
 });
 
-new Chart(ctx2, {
+new Chart(chartGeneralTipos, {
     type: "pie",
     data: {
         labels: ["Noticias", "Guias", "Articulos", "Analisis"],
         datasets: [
             {
-                label: "# of Votes",
+                label: "Publicaciones",
                 data: [12, 19, 3, 5],
                 // data: [$noticias, $guias, $articulos, $analisis],
                 borderWidth: 1,
             },
         ],
     },
-});
-
-new Chart(ctx3, {
-    type: "pie",
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [
-            {
-                label: "# of Votes",
-                data: [12, 19, 3, 5, 2, 3],
-                borderWidth: 1,
-            },
-        ],
-    },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true,
+        plugins: {
+            title: {
+                display: true,
+                text: "Tipos de publicaciones",
             },
         },
     },
