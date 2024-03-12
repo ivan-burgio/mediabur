@@ -4,10 +4,11 @@ namespace Model;
 
 class Analisis extends ActiveRecord {
     protected static $tabla = 'analisis';
-    protected static $columnasDB = ['id', 'titulo', 'tipo', 'fecha', 'creador', 'categoria', 'activo', 'texto'];
+    protected static $columnasDB = ['id', 'titulo', 'portada', 'tipo', 'fecha', 'creador', 'categoria', 'activo', 'texto'];
 
     public $id;
     public $titulo;
+    public $portada;
     public $tipo;
     public $fecha;
     public $creador;
@@ -19,6 +20,7 @@ class Analisis extends ActiveRecord {
     {
         $this->id = $args['id'] ?? null;
         $this->titulo = $args['titulo'] ?? '';
+        $this->portada = $args['portada'] ?? '';
         $this->tipo = $args['tipo'] ?? '';
         $this->fecha = $args['fecha'] ?? '';
         $this->creador = $args['creador'] ?? '';
@@ -30,6 +32,9 @@ class Analisis extends ActiveRecord {
     public function validar() {
         if(!$this->titulo) {
             self::$alertas['error'][] = 'El Titulo es Obligatorio';
+        }
+        if(!$this->portada) {
+            self::$alertas['error'][] = 'La Portada es Obligatorio';
         }
         if(!$this->tipo) {
             self::$alertas['error'][] = 'El Tipo de Publicacion es Obligatorio';

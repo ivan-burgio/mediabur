@@ -34,7 +34,7 @@ $router->get('/dashboard/noticias/crear', [NoticiaController::class, 'crear']);
 $router->post('/dashboard/noticias/crear', [NoticiaController::class, 'crear']);
 $router->get('/dashboard/noticias/editar', [NoticiaController::class, 'editar']);
 $router->post('/dashboard/noticias/editar', [NoticiaController::class, 'editar']);
-$router->post('/dashboard/noticias/eliminar', [NoticiaController::class, 'eliminar']);
+// $router->post('/dashboard/noticias/eliminar', [NoticiaController::class, 'eliminar']);
 
 // Guias
 $router->get('/dashboard/guias', [GuiaController::class, 'index']);

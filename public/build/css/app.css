@@ -1024,9 +1024,10 @@ p {
   justify-content: center;
   width: 100%;
   border: 1px solid black;
+  gap: 3rem;
 }
 .dashboard__linea-elem--titulo {
-  justify-content: flex-start;
+  justify-content: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

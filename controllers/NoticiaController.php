@@ -10,14 +10,17 @@ class NoticiaController {
         session_start();
         isAuth();
         $user_name = $_SESSION['name'];
-
         $noticias = Noticia::all();
+        $url = 'noticias';
+        $tipo = 'noticia';
 
         // Render a la vista
         $router->render('admin/general', [
             'titulo' => 'Noticias',
             'publicaciones' => $noticias,
             'user_name' => $user_name,
+            'url' => $url,
+            'tipo' => $tipo,
         ]);
     }
 
@@ -58,8 +61,8 @@ class NoticiaController {
             'alertas' => $alertas,
             'noticias' => $noticia,
             'user_name' => $user_name,
-            'tipo' => $tipo,
             'url' => $url,
+            'tipo' => $tipo,
         ]);
     }
 

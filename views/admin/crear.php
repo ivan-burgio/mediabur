@@ -7,6 +7,8 @@
         <form class="formulario" method="POST" action="/dashboard/<?php echo $url; ?>/crear">
             <input name="titulo" type="text" class="formulario__input" placeholder="Ingresa un titulo">
 
+            <input name="portada" type="text" class="formulario__input" placeholder="Ingresa el link de una imagen de portada">
+
             <select name="tipo" class="formulario__input">
                 <option value="" selected disabled>Selecciona el tipo de publicacion</option>
                 <option value="Noticia" <?php echo ($tipo == "noticia") ? "selected" : "disabled"; ?>>Noticia</option>
