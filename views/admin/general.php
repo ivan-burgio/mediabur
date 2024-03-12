@@ -12,18 +12,18 @@
     </div>
 
     <?php
-    foreach ($publicaciones as $publicacion) {
+    foreach ($publicaciones as $publi) {
     ?>
         <div class="dashboard__linea">
-            <div class="dashboard__linea-elem"><?php echo $publicacion->id; ?></div>
-            <div class="dashboard__linea-elem"><?php echo $publicacion->titulo; ?></div>
-            <div class="dashboard__linea-elem"><img src="<?php echo $publicacion->portada; ?>"></div>
-            <div class="dashboard__linea-elem"><?php echo $publicacion->tipo; ?></div>
-            <div class="dashboard__linea-elem"><?php echo $publicacion->fecha; ?></div>
-            <div class="dashboard__linea-elem"><?php echo $publicacion->creador; ?></div>
-            <div class="dashboard__linea-elem"><?php echo $publicacion->categoria; ?></div>
+            <div class="dashboard__linea-elem"><?php echo $publi->id; ?></div>
+            <div class="dashboard__linea-elem"><?php echo $publi->titulo; ?></div>
+            <div class="dashboard__linea-elem"><img src="<?php echo $publi->portada; ?>" alt="Portada de <?php echo $publi->titulo; ?>"></div>
+            <div class="dashboard__linea-elem"><?php echo $publi->tipo; ?></div>
+            <div class="dashboard__linea-elem"><?php echo $publi->fecha; ?></div>
+            <div class="dashboard__linea-elem"><?php echo $publi->creador; ?></div>
+            <div class="dashboard__linea-elem"><?php echo $publi->categoria; ?></div>
             <div class="dashboard__linea-elem">
-                <?php echo ($publicacion->activo == 1) ?
+                <?php echo ($publi->activo == 1) ?
                     '<i class="fa-solid fa-check fa-xl" style="color: rgb(0, 120, 0);"></i>'
                     :
                     '<i class="fa-solid fa-xmark fa-xl" style="color: rgb(120, 0, 0);"></i>';
