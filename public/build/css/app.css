@@ -1018,16 +1018,12 @@ p {
 .dashboard__linea--header {
   background-color: #b6b4b4;
 }
-.dashboard__linea-elem, .dashboard__linea-elem--titulo {
+.dashboard__linea-elem {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   border: 1px solid black;
-  gap: 3rem;
-}
-.dashboard__linea-elem--titulo {
-  justify-content: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

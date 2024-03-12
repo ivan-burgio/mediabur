@@ -18,19 +18,13 @@
         &-elem {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
             width: 100%;
             border: 1px solid black;
-            gap: 3rem;
 
-            &--titulo {
-                @extend .dashboard__linea-elem;
-
-                justify-content: center;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 
