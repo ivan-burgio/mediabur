@@ -30,16 +30,16 @@
                 ?>
             </div>
             <div class="dashboard__linea-elem">
-                <a href="/<?php echo $url; ?>/<?php echo $tipo ?>?id=<?php echo $publicacion->id ?>" target="_blank">
+                <a href="/<?php echo $url; ?>/<?php echo $tipo ?>?id=<?php echo $publi->id ?>" target="_blank">
                     <i class="fa-solid fa-eye fa-xl" style="color: rgb(0, 120, 0);"></i>
                 </a>
 
-                <a href="/dashboard/<?php echo $url; ?>/editar?id=<?php echo $publicacion->id ?>" target="_blank">
+                <a href="/dashboard/<?php echo $url; ?>/editar?id=<?php echo $publi->id ?>" target="_blank">
                     <i class="fa-solid fa-pen-to-square fa-xl" style="color: rgb(0, 0, 120);"></i>
                 </a>
 
                 <!-- Comentado por el momento, no se tiene planeado eliminar las publicaciones, simplemente se deja como activa o no.
-                <a href="/dashboard/<?php echo $url; ?>/eliminar?id=<?php echo $publicacion->id ?>" target="_blank">
+                <a href="/dashboard/<?php echo $url; ?>/eliminar?id=<?php echo $publi->id ?>" target="_blank">
                     <i class="fa-solid fa-trash fa-xl" style="color: rgb(120, 0, 0);"></i>
                 </a>
                 -->
