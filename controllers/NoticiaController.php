@@ -44,6 +44,7 @@ class NoticiaController {
         $noticia = new Noticia;
         $url = 'noticias';
         $tipo = 'noticia';
+        $accion = 'Crear';
     
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
             $fechaActual = date('Y-m-d');
@@ -68,21 +69,25 @@ class NoticiaController {
             }
         }
     
-        $router->render('admin/crear', [
-            'titulo' => 'Noticias',
+        $router->render('admin/form', [
+            'titulo' => 'Crear Noticia',
             'alertas' => $alertas,
-            'noticias' => $noticia,
+            'publicacion' => $noticia,
             'user_name' => $user_name,
             'url' => $url,
             'tipo' => $tipo,
+            'accion' => $accion,
         ]);
     }
 
-    public static function edit(Router $router) {
+    public static function editar(Router $router) {
         session_start();
         isAuth();
         $user_name = $_SESSION['name'];
         $alertas = [];
+        $url = 'noticias';
+        $tipo = 'noticia';
+        $accion = 'Editar';
         
         // Validar el ID
         $id = $_GET['id'];
@@ -100,6 +105,14 @@ class NoticiaController {
         }
     
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if(empty($noticia->creador)) {
+                $noticia->creador = $user_name;
+
+            }
+            if(empty($noticia->fecha)) {
+                $fechaActual = date('Y-m-d');
+                $noticia->fecha = $fechaActual;
+            }
 
             // Actualizar la información
             $noticia->sincronizar($_POST);
@@ -113,14 +126,18 @@ class NoticiaController {
             }
         }
     
-        $router->render('admin/editar', [
-            'titulo' => 'Dashboard',
-            'user_name' => $user_name,
+        $router->render('admin/form', [
+            'titulo' => 'Editar Noticia',
             'alertas' => $alertas,
+            'publicacion' => $noticia,
+            'user_name' => $user_name,
+            'url' => $url,
+            'tipo' => $tipo,
+            'accion' => $accion,
         ]);
     }
 
-    public static function delete() {
+    /* public static function delete() {
         session_start();
         isAuth();
     
@@ -134,5 +151,5 @@ class NoticiaController {
                 header('Location: /dashboard/noticias');
             }
         }
-    }
+    } */
 }

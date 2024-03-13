@@ -1,7 +1,7 @@
 <div class="dashboard__contenido--general">
     <form class="form-inline my-2 my-lg-0 d-flex flex-col" method="POST">
         <input
-            class="form-control border-dark w-50"
+            class="form-control border-dark"
             type="search"
             placeholder="Busca ingresando ID, Titulo o Categoria"
             id="<?php echo $url; ?>SearchAdmin"
@@ -47,16 +47,16 @@
                 ?>
             </div>
             <div class="dashboard__linea-elem">
-                <a href="/<?php echo $url; ?>/<?php echo $tipo ?>?id=<?php echo $publi->id ?>" target="_blank">
+                <a href="/<?php echo $url; ?>/<?php echo $tipo ?>?id=<?php echo $publi->id ?>">
                     <i class="fa-solid fa-eye fa-xl" style="color: rgb(0, 120, 0);"></i>
                 </a>
 
-                <a href="/dashboard/<?php echo $url; ?>/editar?id=<?php echo $publi->id ?>" target="_blank">
+                <a href="/dashboard/<?php echo $url; ?>/editar?id=<?php echo $publi->id ?>">
                     <i class="fa-solid fa-pen-to-square fa-xl" style="color: rgb(0, 0, 120);"></i>
                 </a>
 
                 <!-- Comentado por el momento, no se tiene planeado eliminar las publicaciones, simplemente se deja como activa o no.
-                <a href="/dashboard/<?php echo $url; ?>/eliminar?id=<?php echo $publi->id ?>" target="_blank">
+                <a href="/dashboard/<?php echo $url; ?>/eliminar?id=<?php echo $publi->id ?>">
                     <i class="fa-solid fa-trash fa-xl" style="color: rgb(120, 0, 0);"></i>
                 </a>
                 -->
