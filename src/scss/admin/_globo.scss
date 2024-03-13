@@ -13,6 +13,7 @@
     background-color: v.$terciario;
     border-radius: 5rem;
     cursor: pointer;
+    z-index: 300;
 
     @include m.shadow;
 
@@ -39,6 +40,7 @@
         padding: 2rem;
         background-color: v.$white;
         border-radius: 2rem 2rem 0 2rem;
+        z-index: 400;
 
         @include m.shadow;
 

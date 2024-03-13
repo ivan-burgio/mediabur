@@ -957,6 +957,7 @@ p {
   background-color: #44271C;
   border-radius: 5rem;
   cursor: pointer;
+  z-index: 300;
   box-shadow: 1px 0px 11px 1px rgb(0, 0, 0);
 }
 .globo__icono {
@@ -979,6 +980,7 @@ p {
   padding: 2rem;
   background-color: #FFFFFF;
   border-radius: 2rem 2rem 0 2rem;
+  z-index: 400;
   box-shadow: 1px 0px 11px 1px rgb(0, 0, 0);
 }
 .globo__pincho-link {
