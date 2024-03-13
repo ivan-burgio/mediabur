@@ -1,4 +1,21 @@
 <div class="dashboard__contenido--general">
+    <form class="form-inline my-2 my-lg-0 d-flex flex-col" method="POST">
+        <input
+            class="form-control border-dark w-50"
+            type="search"
+            placeholder="Busca ingresando ID, Titulo o Categoria"
+            id="<?php echo $url; ?>SearchAdmin"
+            name="busqueda"
+        >
+        <button class="globo__pincho-x btn-search bg-light" type="submit">
+            <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+        </button>
+
+        <a href="/dashboard/<?php echo $url; ?>" class="globo__pincho-x" id="clearSearchLink">
+            <i class="fa-solid fa-trash fa-lg" style="color: rgb(120, 0, 0);"></i>
+        </a>
+    </form>
+
     <div class="dashboard__linea--header">
         <div class="dashboard__linea-elem">ID</div>
         <div class="dashboard__linea-elem">Titulo</div>

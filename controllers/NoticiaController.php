@@ -10,9 +10,21 @@ class NoticiaController {
         session_start();
         isAuth();
         $user_name = $_SESSION['name'];
-        $noticias = Noticia::all();
         $url = 'noticias';
         $tipo = 'noticia';
+        $terminoBusqueda = '';
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Establece $terminoBusqueda como el valor del formulario POST
+            $terminoBusqueda = isset($_POST['busqueda']) ? $_POST['busqueda'] : '';
+        }
+
+        // Realizar la búsqueda en la base de datos utilizando el término de búsqueda si está configurado
+        if (!empty($terminoBusqueda)) {
+            $noticias = Noticia::buscar($terminoBusqueda);
+        } else {
+            $noticias = Noticia::all();
+        }
 
         // Render a la vista
         $router->render('admin/general', [
@@ -88,7 +100,6 @@ class NoticiaController {
         }
     
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $noticia->time2 = ($_POST['time2'] !== '') ? $_POST['time2'] : null;
 
             // Actualizar la información
             $noticia->sincronizar($_POST);

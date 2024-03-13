@@ -48,4 +48,30 @@ class Noticia extends ActiveRecord {
     
         return self::$alertas;
     }
+
+    public static function buscar($terminoBusqueda) {
+        // Escapa el término de búsqueda para prevenir la inyección de SQL
+        $terminoBusquedaEscapado = '%' . $terminoBusqueda . '%';
+        
+        // Construye la consulta SQL para buscar en las columnas relevantes
+        $consulta = "SELECT * FROM " . static::$tabla . " WHERE id = ? OR titulo LIKE ? OR categoria LIKE ?";
+        $stmt = self::$db->prepare($consulta);
+        
+        // Enlaza los parámetros y ejecuta la consulta
+        $stmt->bind_param("sss", $terminoBusqueda, $terminoBusquedaEscapado, $terminoBusquedaEscapado);
+        $stmt->execute();
+        
+        // Obtiene los resultados de la consulta
+        $resultados = $stmt->get_result();
+        
+        // Itera sobre los resultados y crea objetos Noticia
+        $noticias = [];
+        while ($fila = $resultados->fetch_assoc()) {
+            $noticias[] = static::crearObjeto($fila);
+        }
+        
+        // Libera los recursos y retorna los resultados
+        $stmt->close();
+        return $noticias;
+    }
 }
