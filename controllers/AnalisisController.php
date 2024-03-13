@@ -28,7 +28,7 @@ class AnalisisController {
 
         // Render a la vista
         $router->render('admin/general', [
-            'titulo' => 'analisis',
+            'titulo' => 'Analisis',
             'publicaciones' => $analisis,
             'user_name' => $user_name,
             'url' => $url,
@@ -70,7 +70,7 @@ class AnalisisController {
         }
     
         $router->render('admin/form', [
-            'titulo' => 'Crear analisis',
+            'titulo' => 'Crear Analisis',
             'alertas' => $alertas,
             'publicacion' => $analisis,
             'user_name' => $user_name,
@@ -127,7 +127,7 @@ class AnalisisController {
         }
     
         $router->render('admin/form', [
-            'titulo' => 'Editar analisis',
+            'titulo' => 'Editar Analisis',
             'alertas' => $alertas,
             'publicacion' => $analisis,
             'user_name' => $user_name,

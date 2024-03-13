@@ -70,7 +70,7 @@ class GuiaController {
         }
     
         $router->render('admin/form', [
-            'titulo' => 'Crear guia',
+            'titulo' => 'Crear Guia',
             'alertas' => $alertas,
             'publicacion' => $guia,
             'user_name' => $user_name,
@@ -127,7 +127,7 @@ class GuiaController {
         }
     
         $router->render('admin/form', [
-            'titulo' => 'Editar guia',
+            'titulo' => 'Editar Guia',
             'alertas' => $alertas,
             'publicacion' => $guia,
             'user_name' => $user_name,

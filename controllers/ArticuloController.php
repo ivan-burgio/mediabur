@@ -70,7 +70,7 @@ class ArticuloController {
         }
     
         $router->render('admin/form', [
-            'titulo' => 'Crear articulo',
+            'titulo' => 'Crear Articulo',
             'alertas' => $alertas,
             'publicacion' => $articulo,
             'user_name' => $user_name,
@@ -127,7 +127,7 @@ class ArticuloController {
         }
     
         $router->render('admin/form', [
-            'titulo' => 'Editar articulo',
+            'titulo' => 'Editar Articulo',
             'alertas' => $alertas,
             'publicacion' => $articulo,
             'user_name' => $user_name,
