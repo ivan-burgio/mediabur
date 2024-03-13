@@ -12,8 +12,7 @@
             Noticias
         </p>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/dashboard/noticias">Ver todas las noticias</a></li>
-            <li><a class="dropdown-item" href="#">Buscar noticia</a></li>
+            <li><a class="dropdown-item" href="/dashboard/noticias">Ver noticias</a></li>            
             <li><a class="dropdown-item" href="/dashboard/noticias/crear">Crear noticia</a></li>
             <li><a class="dropdown-item" href="/dashboard/noticias/editar">Editar noticia</a></li>
             <li><a class="dropdown-item" href="/dashboard/noticias/eliminar">Eliminar noticia</a></li>
@@ -23,8 +22,7 @@
             Guias
         </p>
         <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/dashboard/guias">Ver todas las guias</a></li>
-            <li><a class="dropdown-item" href="#">Buscar guia</a></li>
+        <li><a class="dropdown-item" href="/dashboard/guias">Ver guias</a></li>            
             <li><a class="dropdown-item" href="/dashboard/guias/crear">Crear guia</a></li>
             <li><a class="dropdown-item" href="/dashboard/guias/editar">Editar guia</a></li>
             <li><a class="dropdown-item" href="/dashboard/guias/eliminar">Eliminar guia</a></li>
@@ -34,8 +32,7 @@
             Articulos
         </p>
         <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/dashboard/articulos">Ver todos los articulos</a></li>
-            <li><a class="dropdown-item" href="#">Buscar articulo</a></li>
+        <li><a class="dropdown-item" href="/dashboard/articulos">Ver articulos</a></li>            
             <li><a class="dropdown-item" href="/dashboard/articulos/crear">Crear articulo</a></li>
             <li><a class="dropdown-item" href="/dashboard/articulos/editar">Editar articulo</a></li>
             <li><a class="dropdown-item" href="/dashboard/articulos/eliminar">Eliminar articulo</a></li>
@@ -45,8 +42,7 @@
             Analisis
         </p>
         <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/dashboard/analisis">Ver todos los analisis</a></li>
-            <li><a class="dropdown-item" href="#">Buscar analisis</a></li>
+        <li><a class="dropdown-item" href="/dashboard/analisis">Ver analisis</a></li>            
             <li><a class="dropdown-item" href="/dashboard/analisis/crear">Crear analisis</a></li>
             <li><a class="dropdown-item" href="/dashboard/analisis/editar">Editar analisis</a></li>
             <li><a class="dropdown-item" href="/dashboard/analisis/eliminar">Eliminar analisis</a></li>
