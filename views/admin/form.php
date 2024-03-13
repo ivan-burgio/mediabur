@@ -4,7 +4,7 @@
 
         <?php require_once __DIR__ . '/../templates/alertas.php'; ?>
 
-        <form class="formulario" method="POST" <?php echo ($accion == 'Crear') ? 'action="/dashboard/<?php echo $url; ?>/crear ?>"' : '' ?>>
+        <form class="formulario" method="POST">
             <input
                 name="titulo"
                 type="text"
