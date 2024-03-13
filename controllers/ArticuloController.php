@@ -28,7 +28,7 @@ class ArticuloController {
 
         // Render a la vista
         $router->render('admin/general', [
-            'titulo' => 'articulos',
+            'titulo' => 'Articulos',
             'publicaciones' => $articulos,
             'user_name' => $user_name,
             'url' => $url,

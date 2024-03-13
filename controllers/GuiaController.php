@@ -28,7 +28,7 @@ class GuiaController {
 
         // Render a la vista
         $router->render('admin/general', [
-            'titulo' => 'guias',
+            'titulo' => 'Guias',
             'publicaciones' => $guias,
             'user_name' => $user_name,
             'url' => $url,
