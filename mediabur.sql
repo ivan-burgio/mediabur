@@ -125,7 +125,7 @@ CREATE TABLE `noticias` (
   `activo` int DEFAULT '0',
   `texto` longtext COLLATE utf8mb4_general_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -134,7 +134,6 @@ CREATE TABLE `noticias` (
 
 LOCK TABLES `noticias` WRITE;
 /*!40000 ALTER TABLE `noticias` DISABLE KEYS */;
-INSERT INTO `noticias` VALUES (1,'Prueba 1',NULL,'categoria2',NULL,NULL,'categoria2',0,'<h3>Prueba</h3>\r\n<p>Esto es una prueba</p>\r\n<img src=\"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg\" alt=\"imagen de prueba\">'),(2,'prueba 2',NULL,'categoria2',NULL,NULL,'Plataformas',0,'a'),(3,'prueba 3',NULL,'categoria2',NULL,NULL,'Tecnologia',1,'dwadwa'),(4,'prueab 4',NULL,'categoria2',NULL,NULL,'Tecnologia',0,'dwadaw'),(5,'Prueba de creador y fecha',NULL,'noticia','2024-03-11','Ivan Burgio','Entretenimiento',0,'esto es una porueba para ver si se carga bien la fecha y el creador'),(6,'Prueba con imagen','https://www.nintenderos.com/wp-content/uploads/2024/02/nintendo-switch-2.jpg.webp','Noticia','2024-03-12','Ivan Burgio','Videojuegos',1,'<h3>pimba</h3>\r\n\r\n<img src=\"https://www.nintenderos.com/wp-content/uploads/2024/02/nintendo-switch-2.jpg.webp\" alt=\"imagen prubea\" > ');
 /*!40000 ALTER TABLE `noticias` ENABLE KEYS */;
 UNLOCK TABLES;
 
