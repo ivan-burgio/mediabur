@@ -4,6 +4,7 @@ namespace Controllers;
 
 use MVC\Router;
 use Model\Noticia;
+use Model\Todo;
 
 class NoticiaController {
     public static function index(Router $router) {
@@ -42,6 +43,7 @@ class NoticiaController {
         $user_name = $_SESSION['name'];
         $alertas = [];
         $noticia = new Noticia;
+        $todo = new Todo;
         $url = 'noticias';
         $tipo = 'noticia';
         $accion = 'Crear';
@@ -62,6 +64,17 @@ class NoticiaController {
             if (empty($alertas)) {
                 // Guardar en la DB
                 $resultado = $noticia->crear();
+
+                // Guardar en la tabla general
+                $creado = Noticia::get(1);
+
+                $todo->id_publicacion = $creado[0]->id;
+                $todo->tipo_publicacion = $creado[0]->tipo;
+                $todo->fecha_publicacion = $creado[0]->fecha;
+                $todo->categoria_publicacion = $creado[0]->categoria;
+                $todo->activo_publicacion = $creado[0]->activo;
+
+                $todo->crear();
     
                 if ($resultado) {
                     header('Location: /dashboard/noticias');
@@ -114,6 +127,8 @@ class NoticiaController {
                 $noticia->fecha = $fechaActual;
             }
 
+            $noticia->activo = isset($_POST['activo']) ? 1 : 0;
+
             // Actualizar la información
             $noticia->sincronizar($_POST);
     
@@ -121,7 +136,19 @@ class NoticiaController {
             $alertas = $noticia->validar();
     
             // Guardar el registro
-            if(empty($alertas) && $noticia->actualizar()) {
+            if(empty($alertas)) {
+                $noticia->actualizar();
+                
+                // Actualizar en la tabla general
+                $actualizado = Noticia::find($id);
+                $todo = Todo::buscarId($id);
+                
+                $todo[0]->fecha_publicacion = $actualizado->fecha;
+                $todo[0]->categoria_publicacion = $actualizado->categoria;
+                $todo[0]->activo_publicacion = $actualizado->activo;
+                
+                $todo[0]->actualizar();
+
                 header('Location: /dashboard/noticias');
             }
         }

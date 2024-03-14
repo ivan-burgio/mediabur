@@ -4,6 +4,7 @@ namespace Controllers;
 
 use MVC\Router;
 use Model\Articulo;
+use Model\Todo;
 
 class ArticuloController {
     public static function index(Router $router) {
@@ -42,6 +43,7 @@ class ArticuloController {
         $user_name = $_SESSION['name'];
         $alertas = [];
         $articulo = new Articulo;
+        $todo = new Todo;
         $url = 'articulos';
         $tipo = 'articulo';
         $accion = 'Crear';
@@ -62,6 +64,17 @@ class ArticuloController {
             if (empty($alertas)) {
                 // Guardar en la DB
                 $resultado = $articulo->crear();
+
+                // Guardar en la tabla general
+                $creado = Articulo::get(1);
+
+                $todo->id_publicacion = $creado[0]->id;
+                $todo->tipo_publicacion = $creado[0]->tipo;
+                $todo->fecha_publicacion = $creado[0]->fecha;
+                $todo->categoria_publicacion = $creado[0]->categoria;
+                $todo->activo_publicacion = $creado[0]->activo;
+
+                $todo->crear();
     
                 if ($resultado) {
                     header('Location: /dashboard/articulos');
@@ -114,6 +127,8 @@ class ArticuloController {
                 $articulo->fecha = $fechaActual;
             }
 
+            $articulo->activo = isset($_POST['activo']) ? 1 : 0;
+
             // Actualizar la información
             $articulo->sincronizar($_POST);
     
@@ -121,7 +136,19 @@ class ArticuloController {
             $alertas = $articulo->validar();
     
             // Guardar el registro
-            if(empty($alertas) && $articulo->actualizar()) {
+            if(empty($alertas)) {
+                $articulo->actualizar();
+                
+                // Actualizar en la tabla general
+                $actualizado = Articulo::find($id);
+                $todo = Todo::buscarId($id);
+                
+                $todo[0]->fecha_publicacion = $actualizado->fecha;
+                $todo[0]->categoria_publicacion = $actualizado->categoria;
+                $todo[0]->activo_publicacion = $actualizado->activo;
+                
+                $todo[0]->actualizar();
+
                 header('Location: /dashboard/articulos');
             }
         }

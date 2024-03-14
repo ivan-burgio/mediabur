@@ -54,10 +54,10 @@ function formatarFecha($fecha) {
     return date('M. Y', $timestamp);
 }
 
-function tarjetaClasicaTemplate($img, $titulo, $tipo, $fecha) {
+function tarjetaClasicaTemplate($portada, $titulo, $tipo, $fecha) {
     echo '
         <div class="tarjeta-clasica">
-            <img class="tarjeta-clasica__img" src="' . $img . '" alt="imagen del articulo">
+            <img class="tarjeta-clasica__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
 
             <div class="tarjeta-clasica__contenido">
                 <h3 class="tarjeta-clasica__titulo">' . $titulo . '</h3>
@@ -69,10 +69,10 @@ function tarjetaClasicaTemplate($img, $titulo, $tipo, $fecha) {
     ';
 }
 
-function tarjetaAltTemplate($img, $titulo, $tipo) {
+function tarjetaAltTemplate($portada, $titulo, $tipo) {
     echo '
         <div class="tarjeta-alt">
-            <img class="tarjeta-alt__img" src="' . $img . '" alt="imagen del articulo">
+            <img class="tarjeta-alt__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
 
             <div class="tarjeta-alt__contenido">
                 <p class="tarjeta-alt__tipo">' . $tipo . '</p>

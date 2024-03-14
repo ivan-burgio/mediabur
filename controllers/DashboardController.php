@@ -8,7 +8,7 @@ use MVC\Router;
 use Model\Noticia;
 use Model\Analisis;
 use Model\Articulo;
-use Model\Novedad;
+use Model\Todo;
 
 class DashboardController {
     public static function index(Router $router) {
@@ -17,7 +17,7 @@ class DashboardController {
 
         $user_name = $_SESSION['name'];
 
-        $todo = Novedad::all();
+        $todo = Todo::all();
         $noticias = Noticia::all();
         $guias = Guia::all();
         $articulos = Articulo::all();

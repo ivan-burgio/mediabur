@@ -39,6 +39,7 @@ $router->post('/dashboard/noticias/editar', [NoticiaController::class, 'editar']
 
 // Guias
 $router->get('/dashboard/guias', [GuiaController::class, 'index']);
+$router->post('/dashboard/guias', [GuiaController::class, 'index']);
 $router->get('/dashboard/guias/crear', [GuiaController::class, 'crear']);
 $router->post('/dashboard/guias/crear', [GuiaController::class, 'crear']);
 $router->get('/dashboard/guias/editar', [GuiaController::class, 'editar']);
@@ -47,6 +48,7 @@ $router->post('/dashboard/guias/editar', [GuiaController::class, 'editar']);
 
 // Articulos
 $router->get('/dashboard/articulos', [ArticuloController::class, 'index']);
+$router->post('/dashboard/articulos', [ArticuloController::class, 'index']);
 $router->get('/dashboard/articulos/crear', [ArticuloController::class, 'crear']);
 $router->post('/dashboard/articulos/crear', [ArticuloController::class, 'crear']);
 $router->get('/dashboard/articulos/editar', [ArticuloController::class, 'editar']);
@@ -55,6 +57,7 @@ $router->post('/dashboard/articulos/editar', [ArticuloController::class, 'editar
 
 // Analisis
 $router->get('/dashboard/analisis', [AnalisisController::class, 'index']);
+$router->post('/dashboard/analisis', [AnalisisController::class, 'index']);
 $router->get('/dashboard/analisis/crear', [AnalisisController::class, 'crear']);
 $router->post('/dashboard/analisis/crear', [AnalisisController::class, 'crear']);
 $router->get('/dashboard/analisis/editar', [AnalisisController::class, 'editar']);

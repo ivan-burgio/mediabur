@@ -4,6 +4,7 @@ namespace Controllers;
 
 use MVC\Router;
 use Model\Analisis;
+use Model\Todo;
 
 class AnalisisController {
     public static function index(Router $router) {
@@ -42,6 +43,7 @@ class AnalisisController {
         $user_name = $_SESSION['name'];
         $alertas = [];
         $analisis = new Analisis;
+        $todo = new Todo;
         $url = 'analisis';
         $tipo = 'analisis';
         $accion = 'Crear';
@@ -62,6 +64,17 @@ class AnalisisController {
             if (empty($alertas)) {
                 // Guardar en la DB
                 $resultado = $analisis->crear();
+
+                // Guardar en la tabla general
+                $creado = Analisis::get(1);
+
+                $todo->id_publicacion = $creado[0]->id;
+                $todo->tipo_publicacion = $creado[0]->tipo;
+                $todo->fecha_publicacion = $creado[0]->fecha;
+                $todo->categoria_publicacion = $creado[0]->categoria;
+                $todo->activo_publicacion = $creado[0]->activo;
+
+                $todo->crear();
     
                 if ($resultado) {
                     header('Location: /dashboard/analisis');
@@ -114,6 +127,8 @@ class AnalisisController {
                 $analisis->fecha = $fechaActual;
             }
 
+            $analisis->activo = isset($_POST['activo']) ? 1 : 0;
+
             // Actualizar la información
             $analisis->sincronizar($_POST);
     
@@ -121,7 +136,19 @@ class AnalisisController {
             $alertas = $analisis->validar();
     
             // Guardar el registro
-            if(empty($alertas) && $analisis->actualizar()) {
+            if(empty($alertas)) {
+                $analisis->actualizar();
+                
+                // Actualizar en la tabla general
+                $actualizado = Analisis::find($id);
+                $todo = Todo::buscarId($id);
+                
+                $todo[0]->fecha_publicacion = $actualizado->fecha;
+                $todo[0]->categoria_publicacion = $actualizado->categoria;
+                $todo[0]->activo_publicacion = $actualizado->activo;
+                
+                $todo[0]->actualizar();
+
                 header('Location: /dashboard/analisis');
             }
         }

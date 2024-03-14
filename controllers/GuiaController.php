@@ -4,6 +4,7 @@ namespace Controllers;
 
 use MVC\Router;
 use Model\Guia;
+use Model\Todo;
 
 class GuiaController {
     public static function index(Router $router) {
@@ -42,6 +43,7 @@ class GuiaController {
         $user_name = $_SESSION['name'];
         $alertas = [];
         $guia = new Guia;
+        $todo = new Todo;
         $url = 'guias';
         $tipo = 'guia';
         $accion = 'Crear';
@@ -62,6 +64,17 @@ class GuiaController {
             if (empty($alertas)) {
                 // Guardar en la DB
                 $resultado = $guia->crear();
+
+                // Guardar en la tabla general
+                $creado = Guia::get(1);
+
+                $todo->id_publicacion = $creado[0]->id;
+                $todo->tipo_publicacion = $creado[0]->tipo;
+                $todo->fecha_publicacion = $creado[0]->fecha;
+                $todo->categoria_publicacion = $creado[0]->categoria;
+                $todo->activo_publicacion = $creado[0]->activo;
+
+                $todo->crear();
     
                 if ($resultado) {
                     header('Location: /dashboard/guias');
@@ -114,6 +127,8 @@ class GuiaController {
                 $guia->fecha = $fechaActual;
             }
 
+            $guia->activo = isset($_POST['activo']) ? 1 : 0;
+
             // Actualizar la información
             $guia->sincronizar($_POST);
     
@@ -121,7 +136,19 @@ class GuiaController {
             $alertas = $guia->validar();
     
             // Guardar el registro
-            if(empty($alertas) && $guia->actualizar()) {
+            if(empty($alertas)) {
+                $guia->actualizar();
+                
+                // Actualizar en la tabla general
+                $actualizado = Guia::find($id);
+                $todo = Todo::buscarId($id);
+                
+                $todo[0]->fecha_publicacion = $actualizado->fecha;
+                $todo[0]->categoria_publicacion = $actualizado->categoria;
+                $todo[0]->activo_publicacion = $actualizado->activo;
+                
+                $todo[0]->actualizar();
+
                 header('Location: /dashboard/guias');
             }
         }

@@ -47,7 +47,8 @@
                         class="form-check-input"
                         type="checkbox"
                         id="activo"
-                        value="1" <?php echo ($publicacion->activo == 1) ? "checked" : ""; ?>
+                        value="1"
+                        <?php echo ($publicacion->activo == 1) ? "checked" : ""; ?>
                     >
                 </div>
             </div>

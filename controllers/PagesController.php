@@ -5,7 +5,7 @@ namespace Controllers;
 use Model\Guia;
 use MVC\Router;
 use Model\Noticia;
-use Model\Novedad;
+use Model\Todo;
 use Model\Analisis;
 use Model\Articulo;
 
@@ -14,7 +14,7 @@ class PagesController {
         session_start();
         isAdmin();
 
-        $ultimasNovedades = Novedad::get(3);
+        $ultimasNovedades = Todo::get(3);
         $ultimasNoticias = Noticia::get(3);
 
         // Render a la vista
