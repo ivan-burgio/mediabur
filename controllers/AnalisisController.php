@@ -141,7 +141,7 @@ class AnalisisController {
                 
                 // Actualizar en la tabla general
                 $actualizado = Analisis::find($id);
-                $todo = Todo::buscarId($id);
+                $todo = Todo::buscarId($id, 'Analisis');
                 
                 $todo[0]->fecha_publicacion = $actualizado->fecha;
                 $todo[0]->categoria_publicacion = $actualizado->categoria;

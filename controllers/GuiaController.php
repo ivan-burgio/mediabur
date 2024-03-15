@@ -141,7 +141,7 @@ class GuiaController {
                 
                 // Actualizar en la tabla general
                 $actualizado = Guia::find($id);
-                $todo = Todo::buscarId($id);
+                $todo = Todo::buscarId($id, 'Guia');
                 
                 $todo[0]->fecha_publicacion = $actualizado->fecha;
                 $todo[0]->categoria_publicacion = $actualizado->categoria;

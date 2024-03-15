@@ -23,13 +23,13 @@ class Todo extends ActiveRecord {
         $this->activo_publicacion = $args['activo_publicacion'] ?? '0';
     }
 
-    public static function buscarId($id_publicacion) {
+    public static function buscarId($id_publicacion, $tipo_publicacion) {
         // Construye la consulta SQL para buscar en la columna id_publicacion
-        $consulta = "SELECT * FROM " . static::$tabla . " WHERE id_publicacion = ?";
+        $consulta = "SELECT * FROM " . static::$tabla . " WHERE id_publicacion = ? AND tipo_publicacion = ?";
         $stmt = self::$db->prepare($consulta);
         
-        // Enlaza el parámetro y ejecuta la consulta
-        $stmt->bind_param("i", $id_publicacion);
+        // Enlaza los parámetros y ejecuta la consulta
+        $stmt->bind_param("is", $id_publicacion, $tipo_publicacion); // "is" para integer y string
         $stmt->execute();
         
         // Obtiene los resultados de la consulta

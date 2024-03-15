@@ -141,7 +141,7 @@ class NoticiaController {
                 
                 // Actualizar en la tabla general
                 $actualizado = Noticia::find($id);
-                $todo = Todo::buscarId($id);
+                $todo = Todo::buscarId($id, 'Noticia');
                 
                 $todo[0]->fecha_publicacion = $actualizado->fecha;
                 $todo[0]->categoria_publicacion = $actualizado->categoria;
