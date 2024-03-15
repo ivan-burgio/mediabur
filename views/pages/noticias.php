@@ -3,11 +3,11 @@
         <h1><?php echo $titulo; ?></h1>
 
         <div class="tarjetas">
-            <?php echo tarjetaClasicaTemplate('a', 'Titulos de tarjeta 1', 'novedades', 'hoy'); ?>
-
-            <?php echo tarjetaClasicaTemplate('a', 'titulo de tarjeta 2', 'novedades', 'hoy'); ?>
-
-            <?php echo tarjetaClasicaTemplate('a', '¿Veremos el Xbox Game Pass en Nintendo Switch? Microsoft por fin se ha pronunciado', 'novedades', 'hoy'); ?>
+            <?php
+                foreach ($noticias as $noticia) {
+                    echo tarjetaClasicaTemplate($noticia->portada, $noticia->titulo, $noticia->categoria, $noticia->fecha);
+                }
+            ?>
         </div>
     </div>
 

@@ -11,8 +11,7 @@ use Model\Articulo;
 
 class PagesController
 {
-    public static function novedades(Router $router)
-    {
+    public static function novedades(Router $router) {
         session_start();
         isAdmin();
 
@@ -51,8 +50,7 @@ class PagesController
         ]);
     }
 
-    public static function noticias(Router $router)
-    {
+    public static function noticias(Router $router) {
         session_start();
         isAdmin();
 
@@ -61,11 +59,11 @@ class PagesController
         // Render a la vista
         $router->render('pages/noticias', [
             'titulo' => 'Noticias',
+            'noticias' => $noticias,
         ]);
     }
 
-    public static function analisis(Router $router)
-    {
+    public static function analisis(Router $router) {
         session_start();
         isAdmin();
 
@@ -74,11 +72,11 @@ class PagesController
         // Render a la vista
         $router->render('pages/analisis', [
             'titulo' => 'Analisis',
+            'analisis' => $analisis,
         ]);
     }
 
-    public static function articulos(Router $router)
-    {
+    public static function articulos(Router $router) {
         session_start();
         isAdmin();
 
@@ -87,11 +85,11 @@ class PagesController
         // Render a la vista
         $router->render('pages/articulos', [
             'titulo' => 'Articulos',
+            'articulos' => $articulos,
         ]);
     }
 
-    public static function guias(Router $router)
-    {
+    public static function guias(Router $router) {
         session_start();
         isAdmin();
 
@@ -100,6 +98,7 @@ class PagesController
         // Render a la vista
         $router->render('pages/guias', [
             'titulo' => 'Guias',
+            'guias' => $guias,
         ]);
     }
 }
