@@ -22,9 +22,9 @@ class NoticiaController {
 
         // Realizar la búsqueda en la base de datos utilizando el término de búsqueda si está configurado
         if (!empty($terminoBusqueda)) {
-            $noticias = Noticia::buscar($terminoBusqueda);
+            $noticias = array_reverse(Noticia::buscar($terminoBusqueda));
         } else {
-            $noticias = Noticia::all();
+            $noticias = array_reverse(Noticia::all());
         }
 
         // Render a la vista

@@ -22,9 +22,9 @@ class AnalisisController {
 
         // Realizar la búsqueda en la base de datos utilizando el término de búsqueda si está configurado
         if (!empty($terminoBusqueda)) {
-            $analisis = Analisis::buscar($terminoBusqueda);
+            $analisis = array_reverse(Analisis::buscar($terminoBusqueda));
         } else {
-            $analisis = Analisis::all();
+            $analisis = array_reverse(Analisis::all());
         }
 
         // Render a la vista

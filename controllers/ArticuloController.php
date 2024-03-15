@@ -22,9 +22,9 @@ class ArticuloController {
 
         // Realizar la búsqueda en la base de datos utilizando el término de búsqueda si está configurado
         if (!empty($terminoBusqueda)) {
-            $articulos = Articulo::buscar($terminoBusqueda);
+            $articulos = array_reverse(Articulo::buscar($terminoBusqueda));
         } else {
-            $articulos = Articulo::all();
+            $articulos = array_reverse(Articulo::all());
         }
 
         // Render a la vista

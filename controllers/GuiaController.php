@@ -22,9 +22,9 @@ class GuiaController {
 
         // Realizar la búsqueda en la base de datos utilizando el término de búsqueda si está configurado
         if (!empty($terminoBusqueda)) {
-            $guias = Guia::buscar($terminoBusqueda);
+            $guias = array_reverse(Guia::buscar($terminoBusqueda));
         } else {
-            $guias = Guia::all();
+            $guias = array_reverse(Guia::all());
         }
 
         // Render a la vista
