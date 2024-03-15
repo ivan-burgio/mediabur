@@ -54,7 +54,7 @@ class PagesController
         session_start();
         isAdmin();
 
-        $noticias = Noticia::all();
+        $noticias = array_reverse(Noticia::all());
 
         // Render a la vista
         $router->render('pages/noticias', [
@@ -67,7 +67,7 @@ class PagesController
         session_start();
         isAdmin();
 
-        $analisis = Analisis::all();
+        $analisis = array_reverse(Analisis::all());
 
         // Render a la vista
         $router->render('pages/analisis', [
@@ -80,7 +80,7 @@ class PagesController
         session_start();
         isAdmin();
 
-        $articulos = Articulo::all();
+        $articulos = array_reverse(Articulo::all());
 
         // Render a la vista
         $router->render('pages/articulos', [
@@ -93,7 +93,7 @@ class PagesController
         session_start();
         isAdmin();
 
-        $guias = Guia::all();
+        $guias = array_reverse(Guia::all());
 
         // Render a la vista
         $router->render('pages/guias', [
