@@ -5,7 +5,9 @@
         <div class="tarjetas">
             <?php
                 foreach ($novedades as $novedad) {
-                    echo tarjetaClasicaTemplate($novedad->portada, $novedad->titulo, $novedad->categoria, $novedad->fecha);
+                    if($novedad->activo == '1') {
+                        echo tarjetaClasicaTemplate($novedad->portada, $novedad->titulo, $novedad->categoria, $novedad->fecha);
+                    }
                 }
             ?>
         </div>
@@ -22,7 +24,9 @@
     <div class="novedades-noticias">
         <?php
             foreach ($noticias as $noticia) {
-                echo tarjetaAltTemplate($noticia->portada, $noticia->titulo, $noticia->categoria);
+                if($noticia->activo == '1') {
+                    echo tarjetaAltTemplate($noticia->portada, $noticia->titulo, $noticia->categoria);
+                }
             }
         ?>
     </div>

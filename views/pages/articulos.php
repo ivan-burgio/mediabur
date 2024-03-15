@@ -5,7 +5,9 @@
         <div class="tarjetas">
             <?php
                 foreach ($articulos as $articulo) {
-                    echo tarjetaClasicaTemplate($articulo->portada, $articulo->titulo, $articulo->categoria, $articulo->fecha);
+                    if($articulo->activo == '1') {
+                        echo tarjetaClasicaTemplate($articulo->portada, $articulo->titulo, $articulo->categoria, $articulo->fecha);
+                    }
                 }
             ?>
         </div>
