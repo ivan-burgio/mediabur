@@ -54,11 +54,11 @@ class Noticia extends ActiveRecord {
         $terminoBusquedaEscapado = '%' . $terminoBusqueda . '%';
         
         // Construye la consulta SQL para buscar en las columnas relevantes
-        $consulta = "SELECT * FROM " . static::$tabla . " WHERE id = ? OR titulo LIKE ? OR categoria LIKE ?";
+        $consulta = "SELECT * FROM " . static::$tabla . " WHERE id = ? OR titulo LIKE ? OR categoria LIKE ? OR texto LIKE ?";
         $stmt = self::$db->prepare($consulta);
         
         // Enlaza los parámetros y ejecuta la consulta
-        $stmt->bind_param("sss", $terminoBusqueda, $terminoBusquedaEscapado, $terminoBusquedaEscapado);
+        $stmt->bind_param("ssss", $terminoBusqueda, $terminoBusquedaEscapado, $terminoBusquedaEscapado, $terminoBusquedaEscapado);
         $stmt->execute();
         
         // Obtiene los resultados de la consulta
@@ -73,5 +73,5 @@ class Noticia extends ActiveRecord {
         // Libera los recursos y retorna los resultados
         $stmt->close();
         return $noticias;
-    }
+    }  
 }

@@ -4,7 +4,6 @@
             class="form-control border-dark"
             type="search"
             placeholder="Busca ingresando ID, Titulo o Categoria"
-            id="<?php echo $url; ?>SearchAdmin"
             name="busqueda"
         >
         <button class="globo__pincho-x btn-search bg-light" type="submit">

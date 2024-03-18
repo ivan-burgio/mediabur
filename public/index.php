@@ -13,17 +13,30 @@ use Controllers\DashboardController;
 
 $router = new Router();
 
+// ------------------------------------------------------------------ //
+// ------------------------- ACCESO USUARIO ------------------------- //
+// ------------------------------------------------------------------ //
+
 // Pages
 $router->get('/', [PagesController::class, 'novedades']);
+$router->post('/', [PagesController::class, 'novedades']);
 $router->get('/noticias', [PagesController::class, 'noticias']);
+$router->post('/noticias', [PagesController::class, 'noticias']);
 $router->get('/analisis', [PagesController::class, 'analisis']);
+$router->post('/analisis', [PagesController::class, 'analisis']);
 $router->get('/articulos', [PagesController::class, 'articulos']);
+$router->post('/articulos', [PagesController::class, 'articulos']);
 $router->get('/guias', [PagesController::class, 'guias']);
+$router->post('/guias', [PagesController::class, 'guias']);
 
 // Login
 $router->get('/login', [LoginController::class, 'login']);
 $router->post('/login', [LoginController::class, 'login']);
 $router->get('/logout', [LoginController::class, 'logout']);
+
+// ------------------------------------------------------------------ //
+// ------------------------- ADMINISTRACION ------------------------- //
+// ------------------------------------------------------------------ //
 
 // Dashboard
 $router->get('/dashboard', [DashboardController::class, 'index']);

@@ -18,8 +18,15 @@
         </ul>
     </div> -->
 
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control" type="search" placeholder="Buscar"">
-        <button class="btn-search" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #FFFFFF;"></i></button>
+    <form class="form-inline my-2 my-lg-0" method="POST">
+        <input
+            class="form-control"
+            type="search"
+            placeholder="Buscar dentro de <?php echo $url; ?>"
+            name="busqueda"
+        >
+        <button class="btn-search" type="submit">
+            <i class="fa-solid fa-magnifying-glass" style="color: #FFFFFF;"></i>
+        </button>
     </form>
 </nav>

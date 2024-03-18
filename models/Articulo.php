@@ -74,4 +74,39 @@ class Articulo extends ActiveRecord {
         $stmt->close();
         return $articulos;
     }
+
+    public static function buscarNormal($terminoBusqueda, $categoria = null) {
+        // Escapar el término de búsqueda para evitar la inyección de SQL
+        $terminoBusquedaEscapado = '%' . $terminoBusqueda . '%';
+    
+        // Construir la consulta SQL base para buscar en los títulos y textos de las articulos
+        $consulta = "SELECT * FROM " . static::$tabla . " WHERE titulo LIKE ? OR texto LIKE ?";
+        $params = ["ss", $terminoBusquedaEscapado, $terminoBusquedaEscapado];
+    
+        // Si se proporciona una categoría, agregarla como condición a la consulta
+        if (!empty($categoria)) {
+            $consulta .= " AND categoria = ?";
+            $params[0] .= "s";
+            $params[] = $categoria;
+        }
+    
+        $stmt = self::$db->prepare($consulta);
+    
+        // Enlazar los parámetros y ejecutar la consulta
+        call_user_func_array([$stmt, 'bind_param'], $params);
+        $stmt->execute();
+    
+        // Obtener los resultados de la consulta
+        $resultados = $stmt->get_result();
+    
+        // Iterar sobre los resultados y crear objetos Noticia
+        $articulos = [];
+        while ($fila = $resultados->fetch_assoc()) {
+            $articulos[] = static::crearObjeto($fila);
+        }
+    
+        // Liberar los recursos y retornar los resultados
+        $stmt->close();
+        return $articulos;
+    }      
 }
