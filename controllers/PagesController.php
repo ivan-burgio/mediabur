@@ -14,6 +14,7 @@ class PagesController
     public static function novedades(Router $router) {
         session_start();
         isAdmin();
+        $alertas = [];
 
         $ultimasNovedades = Todo::get(3);
         $novedades = [];
@@ -42,11 +43,14 @@ class PagesController
 
         $ultimasNoticias = Noticia::get(3);
 
+        
+
         // Render a la vista
         $router->render('pages/novedades', [
             'titulo' => 'Novedades',
             'novedades' => $novedades,
             'noticias' => $ultimasNoticias,
+            'alertas' => $alertas,
         ]);
     }
 
