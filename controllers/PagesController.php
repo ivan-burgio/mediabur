@@ -70,9 +70,9 @@ class PagesController
         }
     
         // Render a la vista
-        $router->render('pages/noticias', [
-            'titulo' => 'Noticias',
-            'noticias' => $noticias,
+        $router->render('pages/general', [
+            'titulo' => 'Ultimas Noticias',
+            'publicaciones' => $noticias,
             'url' => $url,
             'tipo' => $tipo,
         ]);
@@ -98,9 +98,9 @@ class PagesController
         }
 
         // Render a la vista
-        $router->render('pages/analisis', [
-            'titulo' => 'Analisis',
-            'analisis' => $analisis,
+        $router->render('pages/general', [
+            'titulo' => 'Ultimos Analisis',
+            'publicaciones' => $analisis,
             'url' => $url,
             'tipo' => $tipo,
         ]);
@@ -126,9 +126,9 @@ class PagesController
         }
 
         // Render a la vista
-        $router->render('pages/articulos', [
-            'titulo' => 'Articulos',
-            'articulos' => $articulos,
+        $router->render('pages/general', [
+            'titulo' => 'Ultimos Articulos',
+            'publicaciones' => $articulos,
             'url' => $url,
             'tipo' => $tipo,
         ]);
@@ -154,9 +154,9 @@ class PagesController
         }
 
         // Render a la vista
-        $router->render('pages/guias', [
-            'titulo' => 'Guias',
-            'guias' => $guias,
+        $router->render('pages/general', [
+            'titulo' => 'Ultimas Guias',
+            'publicaciones' => $guias,
             'url' => $url,
             'tipo' => $tipo,
         ]);
