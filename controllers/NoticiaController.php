@@ -69,6 +69,7 @@ class NoticiaController {
                 $creado = Noticia::get(1);
 
                 $todo->id_publicacion = $creado[0]->id;
+                $todo->titulo_publicacion = $creado[0]->titulo;
                 $todo->tipo_publicacion = $creado[0]->tipo;
                 $todo->fecha_publicacion = $creado[0]->fecha;
                 $todo->categoria_publicacion = $creado[0]->categoria;
@@ -143,6 +144,7 @@ class NoticiaController {
                 $actualizado = Noticia::find($id);
                 $todo = Todo::buscarId($id, 'Noticia');
                 
+                $todo->titulo_publicacion = $creado[0]->titulo;
                 $todo[0]->fecha_publicacion = $actualizado->fecha;
                 $todo[0]->categoria_publicacion = $actualizado->categoria;
                 $todo[0]->activo_publicacion = $actualizado->activo;

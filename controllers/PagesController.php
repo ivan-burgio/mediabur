@@ -9,34 +9,68 @@ use Model\Todo;
 use Model\Analisis;
 use Model\Articulo;
 
-class PagesController
-{
+class PagesController {
     public static function novedades(Router $router) {
         session_start();
         isAdmin();
+        $url = 'novedades';
+        $terminoBusqueda = '';
 
-        $ultimasNovedades = Todo::get(3);
-        $novedades = [];
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Establece $terminoBusqueda como el valor del formulario POST
+            $terminoBusqueda = isset($_POST['busqueda']) ? $_POST['busqueda'] : '';
+        }
+    
+        // Realizar la búsqueda en la base de datos utilizando el término de búsqueda si está configurado
+        if (!empty($terminoBusqueda)) {
+            $ultimasNovedades = array_reverse(Todo::buscar($terminoBusqueda));
+            $novedades = [];
 
-        foreach($ultimasNovedades as $novedad) {
-            $tipoPublicacion = $novedad->tipo_publicacion;
-            $idPublicacion = $novedad->id_publicacion;
-            
-            switch($tipoPublicacion) {
-                case 'Noticia':
-                    $novedades[] = Noticia::find($idPublicacion);
-                    break;
-                case 'Guia':
-                    $novedades[] = Guia::find($idPublicacion);
-                    break;
-                case 'Articulo':
-                    $novedades[] = Articulo::find($idPublicacion);
-                    break;
-                case 'Analisis':
-                    $novedades[] = Analisis::find($idPublicacion);
-                    break;
-                default:
-                    break;
+            foreach($ultimasNovedades as $novedad) {
+                $tipoPublicacion = $novedad->tipo_publicacion;
+                $idPublicacion = $novedad->id_publicacion;
+                
+                switch($tipoPublicacion) {
+                    case 'Noticia':
+                        $novedades[] = Noticia::find($idPublicacion);
+                        break;
+                    case 'Guia':
+                        $novedades[] = Guia::find($idPublicacion);
+                        break;
+                    case 'Articulo':
+                        $novedades[] = Articulo::find($idPublicacion);
+                        break;
+                    case 'Analisis':
+                        $novedades[] = Analisis::find($idPublicacion);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        } else {
+            $ultimasNovedades = Todo::get(5);
+            $novedades = [];
+
+            foreach($ultimasNovedades as $novedad) {
+                $tipoPublicacion = $novedad->tipo_publicacion;
+                $idPublicacion = $novedad->id_publicacion;
+                
+                switch($tipoPublicacion) {
+                    case 'Noticia':
+                        $novedades[] = Noticia::find($idPublicacion);
+                        break;
+                    case 'Guia':
+                        $novedades[] = Guia::find($idPublicacion);
+                        break;
+                    case 'Articulo':
+                        $novedades[] = Articulo::find($idPublicacion);
+                        break;
+                    case 'Analisis':
+                        $novedades[] = Analisis::find($idPublicacion);
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 
@@ -47,6 +81,7 @@ class PagesController
             'titulo' => 'Novedades',
             'novedades' => $novedades,
             'noticias' => $ultimasNoticias,
+            'url' => $url,
         ]);
     }
 
