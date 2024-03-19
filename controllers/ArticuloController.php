@@ -139,18 +139,30 @@ class ArticuloController {
             // Guardar el registro
             if(empty($alertas)) {
                 $articulo->actualizar();
-                
-                // Actualizar en la tabla general
-                $actualizado = Articulo::find($id);
+    
+                // Verificar si existe en la tabla general
                 $todo = Todo::buscarId($id, 'Articulo');
-                
-                $todo->titulo_publicacion = $creado[0]->titulo;
-                $todo[0]->fecha_publicacion = $actualizado->fecha;
-                $todo[0]->categoria_publicacion = $actualizado->categoria;
-                $todo[0]->activo_publicacion = $actualizado->activo;
-                
-                $todo[0]->actualizar();
-
+    
+                if(!$todo) {
+                    // Crear el registro en la tabla general si no existe
+                    $todo = new Todo([
+                        'id_publicacion' => $id,
+                        'titulo_publicacion' => $articulo->titulo,
+                        'tipo_publicacion' => $articulo->tipo,
+                        'fecha_publicacion' => $articulo->fecha,
+                        'categoria_publicacion' => $articulo->categoria,
+                        'activo_publicacion' => $articulo->activo,
+                    ]);
+                    $todo->guardar();
+                } else {
+                    // Actualizar en la tabla general
+                    $todo[0]->titulo_publicacion = $articulo->titulo;
+                    $todo[0]->fecha_publicacion = $articulo->fecha;
+                    $todo[0]->categoria_publicacion = $articulo->categoria;
+                    $todo[0]->activo_publicacion = $articulo->activo;
+                    $todo[0]->actualizar();
+                }
+    
                 header('Location: /dashboard/articulos');
             }
         }

@@ -139,18 +139,30 @@ class GuiaController {
             // Guardar el registro
             if(empty($alertas)) {
                 $guia->actualizar();
-                
-                // Actualizar en la tabla general
-                $actualizado = Guia::find($id);
+    
+                // Verificar si existe en la tabla general
                 $todo = Todo::buscarId($id, 'Guia');
-                
-                $todo[0]->titulo_publicacion = $actualizado->titulo;
-                $todo[0]->fecha_publicacion = $actualizado->fecha;
-                $todo[0]->categoria_publicacion = $actualizado->categoria;
-                $todo[0]->activo_publicacion = $actualizado->activo;
-                
-                $todo[0]->actualizar();
-
+    
+                if(!$todo) {
+                    // Crear el registro en la tabla general si no existe
+                    $todo = new Todo([
+                        'id_publicacion' => $id,
+                        'titulo_publicacion' => $guia->titulo,
+                        'tipo_publicacion' => $guia->tipo,
+                        'fecha_publicacion' => $guia->fecha,
+                        'categoria_publicacion' => $guia->categoria,
+                        'activo_publicacion' => $guia->activo,
+                    ]);
+                    $todo->guardar();
+                } else {
+                    // Actualizar en la tabla general
+                    $todo[0]->titulo_publicacion = $guia->titulo;
+                    $todo[0]->fecha_publicacion = $guia->fecha;
+                    $todo[0]->categoria_publicacion = $guia->categoria;
+                    $todo[0]->activo_publicacion = $guia->activo;
+                    $todo[0]->actualizar();
+                }
+    
                 header('Location: /dashboard/guias');
             }
         }

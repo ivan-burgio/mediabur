@@ -139,18 +139,30 @@ class AnalisisController {
             // Guardar el registro
             if(empty($alertas)) {
                 $analisis->actualizar();
-                
-                // Actualizar en la tabla general
-                $actualizado = Analisis::find($id);
+    
+                // Verificar si existe en la tabla general
                 $todo = Todo::buscarId($id, 'Analisis');
-                
-                $todo->titulo_publicacion = $creado[0]->titulo;
-                $todo[0]->fecha_publicacion = $actualizado->fecha;
-                $todo[0]->categoria_publicacion = $actualizado->categoria;
-                $todo[0]->activo_publicacion = $actualizado->activo;
-                
-                $todo[0]->actualizar();
-
+    
+                if(!$todo) {
+                    // Crear el registro en la tabla general si no existe
+                    $todo = new Todo([
+                        'id_publicacion' => $id,
+                        'titulo_publicacion' => $analisis->titulo,
+                        'tipo_publicacion' => $analisis->tipo,
+                        'fecha_publicacion' => $analisis->fecha,
+                        'categoria_publicacion' => $analisis->categoria,
+                        'activo_publicacion' => $analisis->activo,
+                    ]);
+                    $todo->guardar();
+                } else {
+                    // Actualizar en la tabla general
+                    $todo[0]->titulo_publicacion = $analisis->titulo;
+                    $todo[0]->fecha_publicacion = $analisis->fecha;
+                    $todo[0]->categoria_publicacion = $analisis->categoria;
+                    $todo[0]->activo_publicacion = $analisis->activo;
+                    $todo[0]->actualizar();
+                }
+    
                 header('Location: /dashboard/analisis');
             }
         }
