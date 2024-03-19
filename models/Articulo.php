@@ -54,11 +54,11 @@ class Articulo extends ActiveRecord {
         $terminoBusquedaEscapado = '%' . $terminoBusqueda . '%';
         
         // Construye la consulta SQL para buscar en las columnas relevantes
-        $consulta = "SELECT * FROM " . static::$tabla . " WHERE id = ? OR titulo LIKE ? OR categoria LIKE ?";
+        $consulta = "SELECT * FROM " . static::$tabla . " WHERE id = ? OR titulo LIKE ? OR categoria LIKE ? OR texto LIKE ?";
         $stmt = self::$db->prepare($consulta);
         
         // Enlaza los parámetros y ejecuta la consulta
-        $stmt->bind_param("sss", $terminoBusqueda, $terminoBusquedaEscapado, $terminoBusquedaEscapado);
+        $stmt->bind_param("ssss", $terminoBusqueda, $terminoBusquedaEscapado, $terminoBusquedaEscapado, $terminoBusquedaEscapado);
         $stmt->execute();
         
         // Obtiene los resultados de la consulta
@@ -73,40 +73,5 @@ class Articulo extends ActiveRecord {
         // Libera los recursos y retorna los resultados
         $stmt->close();
         return $articulos;
-    }
-
-    public static function buscarNormal($terminoBusqueda, $categoria = null) {
-        // Escapar el término de búsqueda para evitar la inyección de SQL
-        $terminoBusquedaEscapado = '%' . $terminoBusqueda . '%';
-    
-        // Construir la consulta SQL base para buscar en los títulos y textos de las articulos
-        $consulta = "SELECT * FROM " . static::$tabla . " WHERE titulo LIKE ? OR texto LIKE ?";
-        $params = ["ss", $terminoBusquedaEscapado, $terminoBusquedaEscapado];
-    
-        // Si se proporciona una categoría, agregarla como condición a la consulta
-        if (!empty($categoria)) {
-            $consulta .= " AND categoria = ?";
-            $params[0] .= "s";
-            $params[] = $categoria;
-        }
-    
-        $stmt = self::$db->prepare($consulta);
-    
-        // Enlazar los parámetros y ejecutar la consulta
-        call_user_func_array([$stmt, 'bind_param'], $params);
-        $stmt->execute();
-    
-        // Obtener los resultados de la consulta
-        $resultados = $stmt->get_result();
-    
-        // Iterar sobre los resultados y crear objetos Noticia
-        $articulos = [];
-        while ($fila = $resultados->fetch_assoc()) {
-            $articulos[] = static::crearObjeto($fila);
-        }
-    
-        // Liberar los recursos y retornar los resultados
-        $stmt->close();
-        return $articulos;
-    }      
+    }  
 }
