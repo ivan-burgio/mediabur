@@ -60,9 +60,10 @@ function tarjetaClasicaTemplate($portada, $titulo, $tipo, $fecha) {
             <img class="tarjeta-clasica__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
 
             <div class="tarjeta-clasica__contenido">
-                <h3 class="tarjeta-clasica__titulo">' . $titulo . '</h3>
-
                 <p class="tarjeta-clasica__tipo">' . $tipo . '</p>
+
+                <h3 class="tarjeta-clasica__titulo">' . $titulo . '</h3>
+                
                 <p class="tarjeta-clasica__fecha">' . $fecha . '</p>
             </div>
         </div>

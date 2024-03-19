@@ -12,6 +12,11 @@
     padding: 1rem;
     box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
 
+    &:hover {
+        cursor: pointer;
+        background-color: darken(v.$gray-light2, 10);
+    }
+
     &__contenido {
         display: flex;
         flex-direction: column;
@@ -31,7 +36,8 @@
     }
 
     &__tipo {
-        height: 20%;
+        color: darken(v.$secundario, 10);
+        font-weight: 700;
     }
     
     &__img {

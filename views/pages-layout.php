@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Ivan Burgio, a programmer who studies Web Development, here you can learn a little more about him, the technologies he knows and his projects.">
+    <meta name="description" content="Descubre las últimas noticias, reseñas y análisis sobre videojuegos, tecnología, consolas, programación y entretenimiento. Mantente al día con las tendencias y novedades del mundo digital en nuestro blog. ¡Explora artículos informativos, tutoriales y análisis de expertos para entusiastas y profesionales de la tecnología y los videojuegos!">
     <title>Mediabur | <?php echo $titulo ?> </title>
     <link rel="icon" type="image/png" href="/build/img/logo2.png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">

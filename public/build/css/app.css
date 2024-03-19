@@ -711,6 +711,11 @@ p {
   border-radius: 3rem;
   padding: 1rem;
   box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
+  gap: 1rem;
+}
+.tarjeta-clasica:hover {
+  cursor: pointer;
+  background-color: #cbc4c4;
 }
 .tarjeta-clasica__contenido {
   display: flex;
@@ -731,6 +736,10 @@ p {
   height: 100%;
   border-radius: 3rem;
 }
+.tarjeta-clasica__tipo, .tarjeta-clasica__fecha {
+  color: #d78703;
+  font-weight: 700;
+}
 
 .tarjeta-alt {
   display: flex;
@@ -742,6 +751,10 @@ p {
   border-radius: 3rem;
   padding: 1rem;
   box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+.tarjeta-alt:hover {
+  cursor: pointer;
+  background-color: #cbc4c4;
 }
 .tarjeta-alt__contenido {
   display: flex;
@@ -760,7 +773,8 @@ p {
   height: 80%;
 }
 .tarjeta-alt__tipo {
-  height: 20%;
+  color: #d78703;
+  font-weight: 700;
 }
 .tarjeta-alt__img {
   width: 100%;
