@@ -147,6 +147,7 @@ DROP TABLE IF EXISTS `todo`;
 CREATE TABLE `todo` (
   `id` int NOT NULL AUTO_INCREMENT,
   `id_publicacion` int DEFAULT NULL,
+  `titulo_publicacion` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `tipo_publicacion` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `fecha_publicacion` date DEFAULT NULL,
   `categoria_publicacion` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
@@ -200,4 +201,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-12 14:11:51
+-- Dump completed on 2024-03-19 11:21:57
