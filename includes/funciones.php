@@ -49,7 +49,7 @@ function agregarBrDespuesDePunto($texto) {
     return $textoConBr;
 }
 
-function tarjetaClasicaTemplate($portada, $titulo, $tipo, $fecha) {
+function tarjetaClasicaTemplate($id, $portada, $titulo, $categoria, $fecha, $tipo) {
     // Obtener la fecha actual
     $fechaActual = new DateTime();
 
@@ -70,29 +70,29 @@ function tarjetaClasicaTemplate($portada, $titulo, $tipo, $fecha) {
     }
 
     echo '
-        <div class="tarjeta-clasica">
+        <a class="tarjeta-clasica" href="/publicacion?id=' . $id .'&tipo=' . $tipo . '">
             <img class="tarjeta-clasica__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
 
             <div class="tarjeta-clasica__contenido">
-                <p class="tarjeta-clasica__tipo">' . $tipo . '</p>
+                <p class="tarjeta-clasica__tipo">' . $categoria . '</p>
 
                 <h3 class="tarjeta-clasica__titulo">' . $titulo . '</h3>
                 
                 <p class="tarjeta-clasica__fecha">' . $mensajeFecha . '</p>
             </div>
-        </div>
+        </a>
     ';
 }
 
-function tarjetaAltTemplate($portada, $titulo, $tipo) {
+function tarjetaAltTemplate($id, $portada, $titulo, $categoria, $tipo) {
     echo '
-        <div class="tarjeta-alt">
+        <a class="tarjeta-alt" href="/publicacion?id=' . $id .'&tipo=' . $tipo . '">
             <img class="tarjeta-alt__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
 
             <div class="tarjeta-alt__contenido">
-                <p class="tarjeta-alt__tipo">' . $tipo . '</p>
+                <p class="tarjeta-alt__tipo">' . $categoria . '</p>
                 <h3 class="tarjeta-alt__titulo">' . $titulo . '</h3>
             </div>
-        </div>
+        </a>
     ';
 }

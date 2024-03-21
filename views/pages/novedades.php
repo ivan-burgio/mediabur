@@ -6,7 +6,7 @@
             <?php
                 foreach ($novedades as $novedad) {
                     if($novedad->activo == '1') {
-                        echo tarjetaClasicaTemplate($novedad->portada, $novedad->titulo, $novedad->categoria, $novedad->fecha);
+                        echo tarjetaClasicaTemplate($novedad->id, $novedad->portada, $novedad->titulo, $novedad->categoria, $novedad->fecha, $novedad->tipo);
                     }
                 }
             ?>
@@ -25,7 +25,7 @@
         <?php
             foreach ($noticias as $noticia) {
                 if($noticia->activo == '1') {
-                    echo tarjetaAltTemplate($noticia->portada, $noticia->titulo, $noticia->categoria);
+                    echo tarjetaAltTemplate($noticia->id, $noticia->portada, $noticia->titulo, $noticia->categoria, $novedad->tipo);
                 }
             }
         ?>

@@ -46,7 +46,7 @@
                     ?>
                 </div>
                 <div class="dashboard__linea-elem">
-                    <a href="/<?php echo $url; ?>/<?php echo $tipo ?>?id=<?php echo $publi->id ?>">
+                    <a href="/publicacion?id=<?php echo $publi->id ?>&tipo=<?php echo $publi->tipo ?>">
                         <i class="fa-solid fa-eye fa-xl" style="color: rgb(0, 120, 0);"></i>
                     </a>
 
