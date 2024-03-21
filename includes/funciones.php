@@ -49,12 +49,26 @@ function agregarBrDespuesDePunto($texto) {
     return $textoConBr;
 }
 
-function formatarFecha($fecha) {
-    $timestamp = strtotime($fecha);
-    return date('M. Y', $timestamp);
-}
-
 function tarjetaClasicaTemplate($portada, $titulo, $tipo, $fecha) {
+    // Obtener la fecha actual
+    $fechaActual = new DateTime();
+
+    // Convertir la fecha en formato "YYYY-MM-DD" a objeto DateTime
+    $fechaPublicacion = new DateTime($fecha);
+
+    // Calcular la diferencia de días
+    $diferencia = $fechaPublicacion->diff($fechaActual);
+
+    // Mostrar la diferencia de días de manera amigable
+    $mensajeFecha = '';
+    if ($diferencia->days == 0) {
+        $mensajeFecha = 'Hoy';
+    } elseif ($diferencia->days == 1) {
+        $mensajeFecha = 'Publicado hace 1 día';
+    } else {
+        $mensajeFecha = 'Publicado hace ' . $diferencia->days . ' días';
+    }
+
     echo '
         <div class="tarjeta-clasica">
             <img class="tarjeta-clasica__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
@@ -64,7 +78,7 @@ function tarjetaClasicaTemplate($portada, $titulo, $tipo, $fecha) {
 
                 <h3 class="tarjeta-clasica__titulo">' . $titulo . '</h3>
                 
-                <p class="tarjeta-clasica__fecha">' . $fecha . '</p>
+                <p class="tarjeta-clasica__fecha">' . $mensajeFecha . '</p>
             </div>
         </div>
     ';
