@@ -518,6 +518,35 @@ p {
   height: 40rem !important;
 }
 
+.publicacion {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+.publicacion p {
+  width: 100%;
+  font-size: 2rem;
+}
+.publicacion img {
+  width: 100%;
+}
+.publicacion h3 {
+  margin-top: 5rem;
+  width: 100%;
+}
+.publicacion h1 {
+  width: 100%;
+}
+.publicacion a {
+  width: 100%;
+}
+.publicacion__no-activa {
+  color: red;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
 .nav {
   display: flex;
   flex-direction: column;

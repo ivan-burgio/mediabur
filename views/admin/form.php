@@ -58,7 +58,7 @@
                 class="formulario__input textarea"
                 rows="50"
                 cols="50"
-                placeholder="Escribe la publicación como si fuera HTML. Agrega etiquetas <h3>, <p>, <a> y <img> para crear el contenido de la publicación. Para las imagenes procurar que no tengan copyright, derechos de autor o aguna de esas cosas. De esta manera se tiene mucha mas libertad para crear la publicacion ya que no se depende tanto de la cantidad de columnas de la DB ya sea para guardar imagenes o texto. Ademas se puede personalizar bastante mas."
+                placeholder="Escribe la publicación como si fuera HTML. Agrega etiquetas <h3>, <p>, <a> y <img> para crear el contenido de la publicación. Para las imagenes procurar que no tengan copyright, derechos de autor o aguna de esas cosas. De esta manera se tiene mucha mas libertad para crear la publicacion ya que no se depende tanto de la cantidad de columnas de la DB ya sea para guardar imagenes o texto. Ademas se puede personalizar bastante mas. No incluir clases y/o id's, solamente las etiquetas, ya hay personalizacion de estilos para todo el contenido."
             ><?php echo $publicacion->texto ?? ''; ?></textarea>
 
             <input type="submit" class="formulario__boton" name="submit" value="<?php echo $accion; ?> <?php echo $tipo; ?>">

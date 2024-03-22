@@ -238,7 +238,7 @@ class PagesController {
         // Render a la vista
         $router->render('pages/publicacion', [
             'titulo' => $publi->titulo,
-            'publicaciones' => $publi,
+            'publi' => $publi,
             'tipo' => $tipo,
             'url' => $url,
         ]);
