@@ -19,7 +19,7 @@
 
         <div class="footer__nav">
             <a class="footer__nav-link" href="/sobremediabur">Sobre Mediabur</a>
-            <a class="footer__nav-link" href="">Información Legal</a>
+            <a class="footer__nav-link" href="/avisolegal">Información Legal</a>
         </div>
 
         <p class="footer__nav-link">Copyright © Mediabur 2024 | Todos los derechos reservados</p>

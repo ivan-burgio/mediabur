@@ -255,4 +255,17 @@ class PagesController {
             'url' => $url,
         ]);
     }
+
+    public static function legal(Router $router) {
+        session_start();
+        isAdmin();
+        $url = null;
+
+        // Render a la vista
+        $router->render('pages/legal', [
+            'titulo1' => 'Aviso Legal',
+            'titulo2' => 'Política de Privacidad',
+            'url' => $url,
+        ]);
+    }
 }
