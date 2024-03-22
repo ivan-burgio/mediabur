@@ -29,7 +29,7 @@ $router->post('/articulos', [PagesController::class, 'articulos']);
 $router->get('/guias', [PagesController::class, 'guias']);
 $router->post('/guias', [PagesController::class, 'guias']);
 $router->get('/publicacion', [PagesController::class, 'publicacion']);
-$router->post('/publicacion', [PagesController::class, 'publicacion']);
+$router->get('/sobremediabur', [PagesController::class, 'sobre']);
 
 // Login
 $router->get('/login', [LoginController::class, 'login']);

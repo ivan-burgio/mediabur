@@ -243,4 +243,16 @@ class PagesController {
             'url' => $url,
         ]);
     }
+
+    public static function sobre(Router $router) {
+        session_start();
+        isAdmin();
+        $url = null;
+
+        // Render a la vista
+        $router->render('pages/sobre', [
+            'titulo' => 'Sobre Mediabur',
+            'url' => $url,
+        ]);
+    }
 }

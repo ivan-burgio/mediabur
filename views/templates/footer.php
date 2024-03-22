@@ -18,7 +18,7 @@
         <a href="/" class="footer__titulo">Mediabur</a>
 
         <div class="footer__nav">
-            <a class="footer__nav-link" href="">Sobre Mediabur</a>
+            <a class="footer__nav-link" href="/sobremediabur">Sobre Mediabur</a>
             <a class="footer__nav-link" href="">Información Legal</a>
         </div>
 
