@@ -263,8 +263,6 @@ class PagesController {
 
         // Render a la vista
         $router->render('pages/legal', [
-            'titulo1' => 'Aviso Legal',
-            'titulo2' => 'Política de Privacidad',
             'url' => $url,
         ]);
     }
