@@ -26,7 +26,7 @@ DROP TABLE IF EXISTS `analisis`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `analisis` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `titulo` varchar(250) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `portada` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `tipo` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `fecha` date DEFAULT NULL,
@@ -56,7 +56,7 @@ DROP TABLE IF EXISTS `articulos`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `articulos` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `titulo` varchar(250) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `portada` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `tipo` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `fecha` date DEFAULT NULL,
@@ -86,7 +86,7 @@ DROP TABLE IF EXISTS `guias`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `guias` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `titulo` varchar(250) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `portada` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `tipo` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `fecha` date DEFAULT NULL,
@@ -116,7 +116,7 @@ DROP TABLE IF EXISTS `noticias`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `noticias` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `titulo` varchar(250) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `portada` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `tipo` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `fecha` date DEFAULT NULL,
