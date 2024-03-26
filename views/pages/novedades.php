@@ -23,15 +23,7 @@
         <?php
             foreach ($noticias as $noticia) {
                 if($noticia->activo == '1') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    echo tarjetaAltTemplate($noticia->portada, $noticia->titulo, $noticia->categoria);
-=======
                     echo tarjetaAltTemplate($noticia->id, $noticia->portada, $noticia->titulo, $noticia->categoria, $noticia->tipo, $noticia->fecha);
->>>>>>> ae7b193 (Mejoras visuales y Responsive)
-=======
-                    echo tarjetaAltTemplate($noticia->id, $noticia->portada, $noticia->titulo, $noticia->categoria, $novedad->tipo);
->>>>>>> 55c9968f584d441d88a2ab6be40ade82b7fc7be7
                 }
             }
         ?>
