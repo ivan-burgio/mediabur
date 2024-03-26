@@ -1,6 +1,6 @@
 <header class="header">
-    <div class="header__contenedor-row barras">
-        <img class="header__img-barras barras" src="/build/img/barras.svg" alt="imagen barras">
+    <div class="header__contenedor-row barras d-none">
+        <img class="header__img-barras barras" src="/build/img/barras.svg" alt="imagen barras" loading="lazy">
         <p class="barras">Categorias</p>
     </div>
 

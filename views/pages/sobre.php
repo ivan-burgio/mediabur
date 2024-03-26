@@ -13,5 +13,5 @@
         </p>
     </div>
 
-    <div class="ad">Publicidad</div>
+    <div class="ad d-none d-md-block">Publicidad</div>
 </div>

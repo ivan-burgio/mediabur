@@ -44,5 +44,5 @@
         <p class="fs-1">Mediabur no recopila datos personales de los usuarios.</p>
     </div>
 
-    <div class="ad">Publicidad</div>
+    <div class="ad d-none d-md-block">Publicidad</div>
 </div>

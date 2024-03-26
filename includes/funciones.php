@@ -71,7 +71,7 @@ function tarjetaClasicaTemplate($id, $portada, $titulo, $categoria, $fecha, $tip
 
     echo '
         <a class="tarjeta-clasica" href="/publicacion?id=' . $id .'&tipo=' . $tipo . '">
-            <img class="tarjeta-clasica__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
+            <img class="tarjeta-clasica__img" src="' . $portada . '" alt="Portada de ' . $titulo . '" loading="lazy">
 
             <div class="tarjeta-clasica__contenido">
                 <p class="tarjeta-clasica__tipo">' . $categoria . '</p>
@@ -84,14 +84,36 @@ function tarjetaClasicaTemplate($id, $portada, $titulo, $categoria, $fecha, $tip
     ';
 }
 
-function tarjetaAltTemplate($id, $portada, $titulo, $categoria, $tipo) {
+function tarjetaAltTemplate($id, $portada, $titulo, $categoria, $tipo, $fecha) {
+    // Obtener la fecha actual
+    $fechaActual = new DateTime();
+
+    // Convertir la fecha en formato "YYYY-MM-DD" a objeto DateTime
+    $fechaPublicacion = new DateTime($fecha);
+
+    // Calcular la diferencia de días
+    $diferencia = $fechaPublicacion->diff($fechaActual);
+
+    // Mostrar la diferencia de días de manera amigable
+    $mensajeFecha = '';
+    if ($diferencia->days == 0) {
+        $mensajeFecha = 'Hoy';
+    } elseif ($diferencia->days == 1) {
+        $mensajeFecha = 'Publicado hace 1 día';
+    } else {
+        $mensajeFecha = 'Publicado hace ' . $diferencia->days . ' días';
+    }
+
     echo '
         <a class="tarjeta-alt" href="/publicacion?id=' . $id .'&tipo=' . $tipo . '">
-            <img class="tarjeta-alt__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
+            <img class="tarjeta-alt__img" src="' . $portada . '" alt="Portada de ' . $titulo . '" loading="lazy">
 
             <div class="tarjeta-alt__contenido">
                 <p class="tarjeta-alt__tipo">' . $categoria . '</p>
+
                 <h3 class="tarjeta-alt__titulo">' . $titulo . '</h3>
+
+                <p class="tarjeta-clasica__fecha">' . $mensajeFecha . '</p>
             </div>
         </a>
     ';

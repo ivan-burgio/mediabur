@@ -34,6 +34,9 @@
         width: 100%;
         height: 80%;
         color: v.$black;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__tipo {
