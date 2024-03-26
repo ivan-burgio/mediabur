@@ -542,6 +542,35 @@ p {
   height: 40rem !important;
 }
 
+.publicacion {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+.publicacion p {
+  width: 100%;
+  font-size: 2rem;
+}
+.publicacion img {
+  width: 100%;
+}
+.publicacion h3 {
+  margin-top: 5rem;
+  width: 100%;
+}
+.publicacion h1 {
+  width: 100%;
+}
+.publicacion a {
+  width: 100%;
+}
+.publicacion__no-activa {
+  color: red;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -755,12 +784,16 @@ p {
   text-align: left;
   width: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   height: 100%;
   color: #000;
   overflow: hidden;
   text-overflow: ellipsis;
 >>>>>>> ae7b193 (Mejoras visuales y Responsive)
+=======
+  color: #000;
+>>>>>>> 55c9968f584d441d88a2ab6be40ade82b7fc7be7
 }
 .tarjeta-clasica__img {
   max-width: 50%;
@@ -804,11 +837,15 @@ p {
   width: 100%;
   height: 80%;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   color: #000;
   overflow: hidden;
   text-overflow: ellipsis;
 >>>>>>> ae7b193 (Mejoras visuales y Responsive)
+=======
+  color: #000;
+>>>>>>> 55c9968f584d441d88a2ab6be40ade82b7fc7be7
 }
 .tarjeta-alt__tipo {
   color: #d78703;

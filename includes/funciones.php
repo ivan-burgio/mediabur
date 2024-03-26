@@ -49,15 +49,33 @@ function agregarBrDespuesDePunto($texto) {
     return $textoConBr;
 }
 
-function formatarFecha($fecha) {
-    $timestamp = strtotime($fecha);
-    return date('M. Y', $timestamp);
-}
+function tarjetaClasicaTemplate($id, $portada, $titulo, $categoria, $fecha, $tipo) {
+    // Obtener la fecha actual
+    $fechaActual = new DateTime();
 
-function tarjetaClasicaTemplate($portada, $titulo, $tipo, $fecha) {
+    // Convertir la fecha en formato "YYYY-MM-DD" a objeto DateTime
+    $fechaPublicacion = new DateTime($fecha);
+
+    // Calcular la diferencia de días
+    $diferencia = $fechaPublicacion->diff($fechaActual);
+
+    // Mostrar la diferencia de días de manera amigable
+    $mensajeFecha = '';
+    if ($diferencia->days == 0) {
+        $mensajeFecha = 'Hoy';
+    } elseif ($diferencia->days == 1) {
+        $mensajeFecha = 'Publicado hace 1 día';
+    } else {
+        $mensajeFecha = 'Publicado hace ' . $diferencia->days . ' días';
+    }
+
     echo '
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div class="tarjeta-clasica">
+=======
+        <a class="tarjeta-clasica" href="/publicacion?id=' . $id .'&tipo=' . $tipo . '">
+>>>>>>> 55c9968f584d441d88a2ab6be40ade82b7fc7be7
             <img class="tarjeta-clasica__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
 =======
         <a class="tarjeta-clasica" href="/publicacion?id=' . $id .'&tipo=' . $tipo . '">
@@ -65,23 +83,28 @@ function tarjetaClasicaTemplate($portada, $titulo, $tipo, $fecha) {
 >>>>>>> ae7b193 (Mejoras visuales y Responsive)
 
             <div class="tarjeta-clasica__contenido">
-                <p class="tarjeta-clasica__tipo">' . $tipo . '</p>
+                <p class="tarjeta-clasica__tipo">' . $categoria . '</p>
 
                 <h3 class="tarjeta-clasica__titulo">' . $titulo . '</h3>
                 
-                <p class="tarjeta-clasica__fecha">' . $fecha . '</p>
+                <p class="tarjeta-clasica__fecha">' . $mensajeFecha . '</p>
             </div>
-        </div>
+        </a>
     ';
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function tarjetaAltTemplate($portada, $titulo, $tipo) {
+=======
+function tarjetaAltTemplate($id, $portada, $titulo, $categoria, $tipo) {
+>>>>>>> 55c9968f584d441d88a2ab6be40ade82b7fc7be7
     echo '
-        <div class="tarjeta-alt">
+        <a class="tarjeta-alt" href="/publicacion?id=' . $id .'&tipo=' . $tipo . '">
             <img class="tarjeta-alt__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
 
             <div class="tarjeta-alt__contenido">
+<<<<<<< HEAD
                 <p class="tarjeta-alt__tipo">' . $tipo . '</p>
 =======
 function tarjetaAltTemplate($id, $portada, $titulo, $categoria, $tipo, $fecha) {
@@ -112,10 +135,13 @@ function tarjetaAltTemplate($id, $portada, $titulo, $categoria, $tipo, $fecha) {
                 <p class="tarjeta-alt__tipo">' . $categoria . '</p>
 
 >>>>>>> ae7b193 (Mejoras visuales y Responsive)
+=======
+                <p class="tarjeta-alt__tipo">' . $categoria . '</p>
+>>>>>>> 55c9968f584d441d88a2ab6be40ade82b7fc7be7
                 <h3 class="tarjeta-alt__titulo">' . $titulo . '</h3>
 
                 <p class="tarjeta-clasica__fecha">' . $mensajeFecha . '</p>
             </div>
-        </div>
+        </a>
     ';
 }

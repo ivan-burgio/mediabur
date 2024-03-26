@@ -13,5 +13,9 @@
         </p>
     </div>
 
+<<<<<<< HEAD
     <div class="ad d-none d-md-block">Publicidad</div>
+=======
+    <div class="ad">Publicidad</div>
+>>>>>>> 55c9968f584d441d88a2ab6be40ade82b7fc7be7
 </div>

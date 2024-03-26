@@ -198,4 +198,74 @@ class PagesController {
             'tipo' => $tipo,
         ]);
     }
+
+    public static function publicacion(Router $router) {
+        session_start();
+        isAdmin();
+        $url = null;
+
+        // Validar el ID
+        $id = $_GET['id'];
+        $id = filter_var($id, FILTER_VALIDATE_INT);
+        if(!$id) {
+            header('Location: /');
+        }
+
+        // Validar la tipo
+        $tipo = $_GET['tipo'];
+        if(!$id || empty($tipo)) {
+            header('Location: /');
+        }
+
+        // Procesar la publicación según el tipo
+        $publi = null;
+        switch($tipo) {
+            case 'Noticia':
+                $publi = Noticia::find($id);
+                break;
+            case 'Guia':
+                $publi = Guia::find($id);
+                break;
+            case 'Articulo':
+                $publi = Articulo::find($id);
+                break;
+            case 'Analisis':
+                $publi = Analisis::find($id);
+                break;
+            default:
+                header('Location: /');
+                break;
+        }
+
+        // Render a la vista
+        $router->render('pages/publicacion', [
+            'titulo' => $publi->titulo,
+            'publi' => $publi,
+            'tipo' => $tipo,
+            'url' => $url,
+        ]);
+    }
+
+    public static function sobre(Router $router) {
+        session_start();
+        isAdmin();
+        $url = null;
+
+        // Render a la vista
+        $router->render('pages/sobre', [
+            'titulo' => 'Sobre Mediabur',
+            'url' => $url,
+        ]);
+    }
+
+    public static function legal(Router $router) {
+        session_start();
+        isAdmin();
+        $url = null;
+
+        // Render a la vista
+        $router->render('pages/legal', [
+            'url' => $url,
+        ]);
+    }
 }

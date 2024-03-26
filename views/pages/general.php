@@ -10,7 +10,7 @@
             <?php
             foreach ($publicaciones as $publi) {
                 if ($publi->activo == '1') {
-                    echo tarjetaClasicaTemplate($publi->portada, $publi->titulo, $publi->categoria, $publi->fecha);
+                    echo tarjetaClasicaTemplate($publi->id, $publi->portada, $publi->titulo, $publi->categoria, $publi->fecha, $publi->tipo);
                 }
             }
             ?>
