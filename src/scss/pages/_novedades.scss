@@ -3,11 +3,10 @@
 
 .novedades-extra {
     display: flex;
-    flex-direction: column;
-    width: 95%;
     gap: 5rem;
     justify-content: center;
     align-content: center;
+    flex-direction: column;
     
     @include m.tablet {
         display: grid;
