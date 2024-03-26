@@ -457,6 +457,7 @@ p {
 
 .novedades-extra {
   display: flex;
+  flex-direction: column;
   width: 95%;
   gap: 5rem;
   justify-content: center;
