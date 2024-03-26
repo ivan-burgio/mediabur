@@ -1,5 +1,5 @@
 <div class="formulario__main">
-    <h1><?php echo $titulo; ?></h1>
+    <h1 class="text-center"><?php echo $titulo; ?></h1>
     <p class="text-center">Este formulario de inicio de sesion es solo para los administradores de la pagina.</p>
 
     <?php require_once __DIR__ . '/../templates/alertas.php'; ?>

@@ -1,8 +1,6 @@
 <div class="categorias__screen">
 
-<h3 class="categorias__titulo text-light">FUNCIONALIDAD NO DISPONIBLE POR EL MOMENTO</h3>
-
-    <!-- <div id="modal" class="categorias">
+    <div id="modal" class="categorias">
         <div class="categorias__seccion d-flex flex-row justify-content-between align-items-center border-bottom border-1 border-dark h-25">
             <h3 class="categorias__titulo">Categorias</h3>
             <i class="fa-solid fa-x fa-lg categorias__titulo--icono"></i>
@@ -110,5 +108,5 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </div>

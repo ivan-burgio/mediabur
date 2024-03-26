@@ -42,8 +42,8 @@ class LoginController {
 
         // Render a la vista
         $router->render('auth/login', [
-            'titulo_pestaña' => 'Iniciar Sesion',
-            'titulo_pagina' => 'Iniciar Sesion',
+            'titulo' => 'Iniciar Sesion',
+            'titulo' => 'Iniciar Sesion',
             'alertas' => $alertas,
         ]);
     }

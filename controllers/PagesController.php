@@ -75,12 +75,14 @@ class PagesController {
         }
 
         $ultimasNoticias = Noticia::get(3);
+        $ultimosArticulos = Articulo::get(3);
 
         // Render a la vista
         $router->render('pages/novedades', [
-            'titulo' => 'Novedades',
+            'titulo' => 'Ultimas Publicaciones',
             'novedades' => $novedades,
             'noticias' => $ultimasNoticias,
+            'articulos' => $ultimosArticulos,
             'url' => $url,
         ]);
     }

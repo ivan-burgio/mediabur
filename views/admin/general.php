@@ -33,8 +33,8 @@
         <?php foreach ($publicaciones as $publi) { ?>
             <div class="dashboard__linea">
                 <div class="dashboard__linea-elem"><?php echo $publi->id; ?></div>
-                <div class="dashboard__linea-elem"><?php echo $publi->titulo; ?></div>
-                <div class="dashboard__linea-elem"><img src="<?php echo $publi->portada; ?>" alt="Portada de <?php echo $publi->titulo; ?>"></div>
+                <div class="dashboard__linea-elem--titulo"><?php echo $publi->titulo; ?></div>
+                <div class="dashboard__linea-elem"><img src="<?php echo $publi->portada; ?>" alt="Portada de <?php echo $publi->titulo; ?>" loading="lazy"></div>
                 <div class="dashboard__linea-elem"><?php echo $publi->fecha; ?></div>
                 <div class="dashboard__linea-elem"><?php echo $publi->creador; ?></div>
                 <div class="dashboard__linea-elem"><?php echo $publi->categoria; ?></div>

@@ -25,6 +25,12 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+
+            &--titulo {
+                @extend .dashboard__linea-elem;
+
+                justify-content: flex-start;
+            }
         }
     }
 

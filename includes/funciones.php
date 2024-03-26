@@ -56,8 +56,13 @@ function formatarFecha($fecha) {
 
 function tarjetaClasicaTemplate($portada, $titulo, $tipo, $fecha) {
     echo '
+<<<<<<< HEAD
         <div class="tarjeta-clasica">
             <img class="tarjeta-clasica__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
+=======
+        <a class="tarjeta-clasica" href="/publicacion?id=' . $id .'&tipo=' . $tipo . '">
+            <img class="tarjeta-clasica__img" src="' . $portada . '" alt="Portada de ' . $titulo . '" loading="lazy">
+>>>>>>> ae7b193 (Mejoras visuales y Responsive)
 
             <div class="tarjeta-clasica__contenido">
                 <p class="tarjeta-clasica__tipo">' . $tipo . '</p>
@@ -70,6 +75,7 @@ function tarjetaClasicaTemplate($portada, $titulo, $tipo, $fecha) {
     ';
 }
 
+<<<<<<< HEAD
 function tarjetaAltTemplate($portada, $titulo, $tipo) {
     echo '
         <div class="tarjeta-alt">
@@ -77,7 +83,38 @@ function tarjetaAltTemplate($portada, $titulo, $tipo) {
 
             <div class="tarjeta-alt__contenido">
                 <p class="tarjeta-alt__tipo">' . $tipo . '</p>
+=======
+function tarjetaAltTemplate($id, $portada, $titulo, $categoria, $tipo, $fecha) {
+    // Obtener la fecha actual
+    $fechaActual = new DateTime();
+
+    // Convertir la fecha en formato "YYYY-MM-DD" a objeto DateTime
+    $fechaPublicacion = new DateTime($fecha);
+
+    // Calcular la diferencia de días
+    $diferencia = $fechaPublicacion->diff($fechaActual);
+
+    // Mostrar la diferencia de días de manera amigable
+    $mensajeFecha = '';
+    if ($diferencia->days == 0) {
+        $mensajeFecha = 'Hoy';
+    } elseif ($diferencia->days == 1) {
+        $mensajeFecha = 'Publicado hace 1 día';
+    } else {
+        $mensajeFecha = 'Publicado hace ' . $diferencia->days . ' días';
+    }
+
+    echo '
+        <a class="tarjeta-alt" href="/publicacion?id=' . $id .'&tipo=' . $tipo . '">
+            <img class="tarjeta-alt__img" src="' . $portada . '" alt="Portada de ' . $titulo . '" loading="lazy">
+
+            <div class="tarjeta-alt__contenido">
+                <p class="tarjeta-alt__tipo">' . $categoria . '</p>
+
+>>>>>>> ae7b193 (Mejoras visuales y Responsive)
                 <h3 class="tarjeta-alt__titulo">' . $titulo . '</h3>
+
+                <p class="tarjeta-clasica__fecha">' . $mensajeFecha . '</p>
             </div>
         </div>
     ';
