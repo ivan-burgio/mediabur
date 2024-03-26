@@ -70,17 +70,8 @@ function tarjetaClasicaTemplate($id, $portada, $titulo, $categoria, $fecha, $tip
     }
 
     echo '
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div class="tarjeta-clasica">
-=======
-        <a class="tarjeta-clasica" href="/publicacion?id=' . $id .'&tipo=' . $tipo . '">
->>>>>>> 55c9968f584d441d88a2ab6be40ade82b7fc7be7
-            <img class="tarjeta-clasica__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
-=======
         <a class="tarjeta-clasica" href="/publicacion?id=' . $id .'&tipo=' . $tipo . '">
             <img class="tarjeta-clasica__img" src="' . $portada . '" alt="Portada de ' . $titulo . '" loading="lazy">
->>>>>>> ae7b193 (Mejoras visuales y Responsive)
 
             <div class="tarjeta-clasica__contenido">
                 <p class="tarjeta-clasica__tipo">' . $categoria . '</p>
@@ -93,20 +84,6 @@ function tarjetaClasicaTemplate($id, $portada, $titulo, $categoria, $fecha, $tip
     ';
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-function tarjetaAltTemplate($portada, $titulo, $tipo) {
-=======
-function tarjetaAltTemplate($id, $portada, $titulo, $categoria, $tipo) {
->>>>>>> 55c9968f584d441d88a2ab6be40ade82b7fc7be7
-    echo '
-        <a class="tarjeta-alt" href="/publicacion?id=' . $id .'&tipo=' . $tipo . '">
-            <img class="tarjeta-alt__img" src="' . $portada . '" alt="Portada de ' . $titulo . '">
-
-            <div class="tarjeta-alt__contenido">
-<<<<<<< HEAD
-                <p class="tarjeta-alt__tipo">' . $tipo . '</p>
-=======
 function tarjetaAltTemplate($id, $portada, $titulo, $categoria, $tipo, $fecha) {
     // Obtener la fecha actual
     $fechaActual = new DateTime();
@@ -134,10 +111,6 @@ function tarjetaAltTemplate($id, $portada, $titulo, $categoria, $tipo, $fecha) {
             <div class="tarjeta-alt__contenido">
                 <p class="tarjeta-alt__tipo">' . $categoria . '</p>
 
->>>>>>> ae7b193 (Mejoras visuales y Responsive)
-=======
-                <p class="tarjeta-alt__tipo">' . $categoria . '</p>
->>>>>>> 55c9968f584d441d88a2ab6be40ade82b7fc7be7
                 <h3 class="tarjeta-alt__titulo">' . $titulo . '</h3>
 
                 <p class="tarjeta-clasica__fecha">' . $mensajeFecha . '</p>
