@@ -1,8 +1,8 @@
 <footer class="footer">
     <div class="footer__contenedor">
-        <div class="footer__img">
-            <img class="footer__img-barras barras d-none" src="/build/img/barras.svg" alt="imagen barras" loading="lazy">
-        </div>
+        <!-- <div class="footer__img">
+            <img class="footer__img-barras barras" src="/build/img/barras.svg" alt="imagen barras" loading="lazy">
+        </div> -->
 
         <div class="footer__nav">
             <a href="/" class="footer__nav-link">Novedades</a>
@@ -24,6 +24,4 @@
 
         <p class="footer__nav-link">Copyright © Mediabur 2024 | Todos los derechos reservados</p>
     </div>
-
-    <div class="footer__contenedor3"></div>
 </footer>
